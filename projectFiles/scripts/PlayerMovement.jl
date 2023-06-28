@@ -1,7 +1,8 @@
-using julGame.Macros
-using julGame.MainLoop
+using JulGame.Macros
+using JulGame.MainLoop
 
 mutable struct PlayerMovement
+    animator
     canMove
     input
     isFacingRight
@@ -29,6 +30,9 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 this.jump()
             end
             MAIN.scene.camera.target = this.parent.getTransform()
+            this.animator = this.parent.getAnimator()
+            this.animator.currentAnimation = this.animator.animations[1]
+            this.animator.currentAnimation.animatedFPS = 0
         end
     elseif s == :update
         function(deltaTime)
@@ -37,23 +41,40 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             speed = 5
             input = MAIN.input
             y = this.parent.getRigidbody().getVelocity().y
-
             if (input.getButtonPressed("SPACE")|| this.isJump) && this.parent.getRigidbody().grounded && this.canMove
+                this.animator.currentAnimation.animatedFPS = 0
+                this.animator.forceSpriteUpdate(2)
+
                 this.parent.getRigidbody().grounded = false
                 y = -5.0
             end
             if input.getButtonHeldDown("A") && this.canMove
+                if input.getButtonPressed("A")
+                    this.animator.forceSpriteUpdate(2)
+                end
                 x = -speed
+                if this.parent.getRigidbody().grounded
+                    this.animator.currentAnimation.animatedFPS = 5
+                end
                 if this.isFacingRight
                     this.isFacingRight = false
                     this.parent.getSprite().flip()
                 end
             elseif input.getButtonHeldDown("D") && this.canMove
+                if input.getButtonPressed("D")
+                    this.animator.forceSpriteUpdate(2)
+                end
+                if this.parent.getRigidbody().grounded
+                    this.animator.currentAnimation.animatedFPS = 5
+                end
                 x = speed
                 if !this.isFacingRight
                     this.isFacingRight = true
                     this.parent.getSprite().flip()
                 end
+            elseif this.parent.getRigidbody().grounded
+                this.animator.currentAnimation.animatedFPS = 0
+                this.animator.forceSpriteUpdate(1)
             end
             
             this.parent.getRigidbody().setVelocity(Vector2f(x, y))
