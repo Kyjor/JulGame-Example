@@ -1214,7 +1214,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 13,
+                        "x": 14,
                         "y": 2
                     },
                     "type": "Transform",
@@ -1242,8 +1242,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 14,
-                        "y": 2
+                        "x": 0,
+                        "y": 3
                     },
                     "type": "Transform",
                     "scale": {
@@ -1270,7 +1270,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 0,
+                        "x": 1,
                         "y": 3
                     },
                     "type": "Transform",
@@ -1298,7 +1298,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 1,
+                        "x": 2,
                         "y": 3
                     },
                     "type": "Transform",
@@ -1326,7 +1326,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 2,
+                        "x": 3,
                         "y": 3
                     },
                     "type": "Transform",
@@ -1354,7 +1354,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 3,
+                        "x": 4,
                         "y": 3
                     },
                     "type": "Transform",
@@ -1382,34 +1382,6 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 4,
-                        "y": 3
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 51,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
                         "x": 5,
                         "y": 3
                     },
@@ -1433,7 +1405,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 52,
+            "id": 51,
             "components": [
                 {
                     "rotation": 0,
@@ -1461,7 +1433,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 53,
+            "id": 52,
             "components": [
                 {
                     "rotation": 0,
@@ -1489,12 +1461,40 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 54,
+            "id": 53,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
                         "x": 8,
+                        "y": 3
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                    },
+                    "type": "Sprite",
+                    "imagePath": "tile_0000.png",
+                    "isFlipped": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": 54,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 9,
                         "y": 3
                     },
                     "type": "Transform",
@@ -1522,7 +1522,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 9,
+                        "x": 10,
                         "y": 3
                     },
                     "type": "Transform",
@@ -1550,7 +1550,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 10,
+                        "x": 11,
                         "y": 3
                     },
                     "type": "Transform",
@@ -1578,34 +1578,6 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 11,
-                        "y": 3
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 58,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
                         "x": 12,
                         "y": 3
                     },
@@ -1626,10 +1598,10 @@
         },
         {
             "isActive": true,
-            "name": "tile2",
+            "name": "Gun",
             "scripts": [
             ],
-            "id": 59,
+            "id": 58,
             "components": [
                 {
                     "rotation": 0,
@@ -1647,8 +1619,16 @@
                     "crop": {
                     },
                     "type": "Sprite",
-                    "imagePath": "tile_0000.png",
+                    "imagePath": "tile_0050.png",
                     "isFlipped": false
+                },
+                {
+                    "tag": "Test",
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider"
                 }
             ]
         },
@@ -1657,7 +1637,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 60,
+            "id": 59,
             "components": [
                 {
                     "rotation": 0,
@@ -1685,7 +1665,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 61,
+            "id": 60,
             "components": [
                 {
                     "rotation": 0,
@@ -1713,7 +1693,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 62,
+            "id": 61,
             "components": [
                 {
                     "rotation": 0,
@@ -1741,7 +1721,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 63,
+            "id": 62,
             "components": [
                 {
                     "rotation": 0,
@@ -1769,7 +1749,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 64,
+            "id": 63,
             "components": [
                 {
                     "rotation": 0,
@@ -1797,7 +1777,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 65,
+            "id": 64,
             "components": [
                 {
                     "rotation": 0,
@@ -1825,7 +1805,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 66,
+            "id": 65,
             "components": [
                 {
                     "rotation": 0,
@@ -1853,7 +1833,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 67,
+            "id": 66,
             "components": [
                 {
                     "rotation": 0,
@@ -1881,7 +1861,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 68,
+            "id": 67,
             "components": [
                 {
                     "rotation": 0,
@@ -1909,7 +1889,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 69,
+            "id": 68,
             "components": [
                 {
                     "rotation": 0,
@@ -1937,7 +1917,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 70,
+            "id": 69,
             "components": [
                 {
                     "rotation": 0,
@@ -1965,7 +1945,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 71,
+            "id": 70,
             "components": [
                 {
                     "rotation": 0,
@@ -1993,7 +1973,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 72,
+            "id": 71,
             "components": [
                 {
                     "rotation": 0,
@@ -2029,13 +2009,13 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 73,
+            "id": 72,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 13,
-                        "y": 4
+                        "x": 18,
+                        "y": 5
                     },
                     "type": "Transform",
                     "scale": {
@@ -2065,13 +2045,13 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 74,
+            "id": 73,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 14,
-                        "y": 4
+                        "x": 21,
+                        "y": 5
                     },
                     "type": "Transform",
                     "scale": {
@@ -2101,7 +2081,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 75,
+            "id": 74,
             "components": [
                 {
                     "rotation": 0,
@@ -2129,7 +2109,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 76,
+            "id": 75,
             "components": [
                 {
                     "rotation": 0,
@@ -2150,7 +2130,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 77,
+            "id": 76,
             "components": [
                 {
                     "rotation": 0,
@@ -2178,7 +2158,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 78,
+            "id": 77,
             "components": [
                 {
                     "rotation": 0,
@@ -2206,7 +2186,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 79,
+            "id": 78,
             "components": [
                 {
                     "rotation": 0,
@@ -2234,7 +2214,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 80,
+            "id": 79,
             "components": [
                 {
                     "rotation": 0,
@@ -2262,7 +2242,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 81,
+            "id": 80,
             "components": [
                 {
                     "rotation": 0,
@@ -2290,7 +2270,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 82,
+            "id": 81,
             "components": [
                 {
                     "rotation": 0,
@@ -2318,7 +2298,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 83,
+            "id": 82,
             "components": [
                 {
                     "rotation": 0,
@@ -2346,7 +2326,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 84,
+            "id": 83,
             "components": [
                 {
                     "rotation": 0,
@@ -2374,7 +2354,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 85,
+            "id": 84,
             "components": [
                 {
                     "rotation": 0,
@@ -2402,7 +2382,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 86,
+            "id": 85,
             "components": [
                 {
                     "rotation": 0,
@@ -2430,13 +2410,13 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 87,
+            "id": 86,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 14,
-                        "y": 5
+                        "x": 21,
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -2466,7 +2446,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 88,
+            "id": 87,
             "components": [
                 {
                     "rotation": 0,
@@ -2502,7 +2482,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 89,
+            "id": 88,
             "components": [
                 {
                     "rotation": 0,
@@ -2538,7 +2518,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 90,
+            "id": 89,
             "components": [
                 {
                     "rotation": 0,
@@ -2574,7 +2554,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 91,
+            "id": 90,
             "components": [
                 {
                     "rotation": 0,
@@ -2610,7 +2590,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 92,
+            "id": 91,
             "components": [
                 {
                     "rotation": 0,
@@ -2646,7 +2626,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 93,
+            "id": 92,
             "components": [
                 {
                     "rotation": 0,
@@ -2682,7 +2662,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 94,
+            "id": 93,
             "components": [
                 {
                     "rotation": 0,
@@ -2718,7 +2698,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 95,
+            "id": 94,
             "components": [
                 {
                     "rotation": 0,
@@ -2754,7 +2734,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 96,
+            "id": 95,
             "components": [
                 {
                     "rotation": 0,
@@ -2782,7 +2762,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 97,
+            "id": 96,
             "components": [
                 {
                     "rotation": 0,
@@ -2806,7 +2786,7 @@
                 {
                     "tag": "Test",
                     "size": {
-                        "x": 1,
+                        "x": 0.8500000238418579,
                         "y": 1
                     },
                     "type": "Collider"
@@ -2818,7 +2798,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 98,
+            "id": 97,
             "components": [
                 {
                     "rotation": 0,
@@ -2846,7 +2826,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 99,
+            "id": 98,
             "components": [
                 {
                     "rotation": 0,
@@ -2882,7 +2862,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 100,
+            "id": 99,
             "components": [
                 {
                     "rotation": 0,
@@ -2918,7 +2898,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 101,
+            "id": 100,
             "components": [
                 {
                     "rotation": 0,
@@ -2946,7 +2926,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 102,
+            "id": 101,
             "components": [
                 {
                     "rotation": 0,
@@ -2974,7 +2954,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 103,
+            "id": 102,
             "components": [
                 {
                     "rotation": 0,
@@ -3002,7 +2982,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 104,
+            "id": 103,
             "components": [
                 {
                     "rotation": 0,
@@ -3030,7 +3010,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 105,
+            "id": 104,
             "components": [
                 {
                     "rotation": 0,
@@ -3058,7 +3038,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 106,
+            "id": 105,
             "components": [
                 {
                     "rotation": 0,
@@ -3086,7 +3066,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 107,
+            "id": 106,
             "components": [
                 {
                     "rotation": 0,
@@ -3114,7 +3094,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 108,
+            "id": 107,
             "components": [
                 {
                     "rotation": 0,
@@ -3150,7 +3130,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 109,
+            "id": 108,
             "components": [
                 {
                     "rotation": 0,
@@ -3178,7 +3158,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 110,
+            "id": 109,
             "components": [
                 {
                     "rotation": 0,
@@ -3206,7 +3186,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 111,
+            "id": 110,
             "components": [
                 {
                     "rotation": 0,
@@ -3234,7 +3214,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 112,
+            "id": 111,
             "components": [
                 {
                     "rotation": 0,
@@ -3262,7 +3242,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 113,
+            "id": 112,
             "components": [
                 {
                     "rotation": 0,
@@ -3290,7 +3270,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 114,
+            "id": 113,
             "components": [
                 {
                     "rotation": 0,
@@ -3326,12 +3306,40 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 115,
+            "id": 114,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
                         "x": 0,
+                        "y": 8
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                    },
+                    "type": "Sprite",
+                    "imagePath": "tile_0000.png",
+                    "isFlipped": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": 115,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 1,
                         "y": 8
                     },
                     "type": "Transform",
@@ -3359,7 +3367,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 1,
+                        "x": 2,
                         "y": 8
                     },
                     "type": "Transform",
@@ -3387,34 +3395,6 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 2,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 118,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
                         "x": 3,
                         "y": 8
                     },
@@ -3438,7 +3418,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 119,
+            "id": 118,
             "components": [
                 {
                     "rotation": 0,
@@ -3466,7 +3446,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 120,
+            "id": 119,
             "components": [
                 {
                     "rotation": 0,
@@ -3494,7 +3474,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 121,
+            "id": 120,
             "components": [
                 {
                     "rotation": 0,
@@ -3522,7 +3502,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 122,
+            "id": 121,
             "components": [
                 {
                     "rotation": 0,
@@ -3550,7 +3530,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 123,
+            "id": 122,
             "components": [
                 {
                     "rotation": 0,
@@ -3578,7 +3558,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 124,
+            "id": 123,
             "components": [
                 {
                     "rotation": 0,
@@ -3606,7 +3586,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 125,
+            "id": 124,
             "components": [
                 {
                     "rotation": 0,
@@ -3634,7 +3614,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 126,
+            "id": 125,
             "components": [
                 {
                     "rotation": 0,
@@ -3662,12 +3642,40 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 127,
+            "id": 126,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
                         "x": 12,
+                        "y": 8
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                    },
+                    "type": "Sprite",
+                    "imagePath": "tile_0000.png",
+                    "isFlipped": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": 127,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 13,
                         "y": 8
                     },
                     "type": "Transform",
@@ -3695,34 +3703,6 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 13,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 129,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
                         "x": 14,
                         "y": 8
                     },
@@ -3743,73 +3723,6 @@
         },
         {
             "isActive": true,
-            "name": "Player",
-            "scripts": [
-                {
-                    "name": "PlayerMovement",
-                    "parameters": [
-                    ]
-                }
-            ],
-            "id": 130,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 1,
-                        "y": 5
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "PlayerWalkNoGun.png",
-                    "isFlipped": false
-                },
-                {
-                    "tag": "Test",
-                    "size": {
-                        "x": 1,
-                        "y": 1
-                    },
-                    "type": "Collider"
-                },
-                {
-                    "mass": 1,
-                    "type": "Rigidbody"
-                },
-                {
-                    "animations": [
-                        {
-                            "animatedFPS": 60,
-                            "frames": [
-                                {
-                                    "x": 0,
-                                    "y": 0,
-                                    "w": 16,
-                                    "h": 16
-                                },
-                                {
-                                    "x": 17,
-                                    "y": 0,
-                                    "w": 16,
-                                    "h": 16
-                                }
-                            ]
-                        }
-                    ],
-                    "type": "Animator"
-                }
-            ]
-        },
-        {
-            "isActive": true,
             "name": "GameManager",
             "scripts": [
                 {
@@ -3818,13 +3731,13 @@
                     ]
                 }
             ],
-            "id": 131,
+            "id": 129,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 0,
-                        "y": 0
+                        "x": 4,
+                        "y": -1
                     },
                     "type": "Transform",
                     "scale": {
@@ -3839,7 +3752,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 132,
+            "id": 130,
             "components": [
                 {
                     "rotation": 0,
@@ -3867,7 +3780,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 133,
+            "id": 131,
             "components": [
                 {
                     "rotation": 0,
@@ -3895,7 +3808,299 @@
             "name": "tile2",
             "scripts": [
             ],
+            "id": 132,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 16,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                    },
+                    "type": "Sprite",
+                    "imagePath": "tile_0006.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Test",
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": 133,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 14,
+                        "y": 0
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                    },
+                    "type": "Sprite",
+                    "imagePath": "tile_0000.png",
+                    "isFlipped": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
             "id": 134,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 15,
+                        "y": 0
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                    },
+                    "type": "Sprite",
+                    "imagePath": "tile_0000.png",
+                    "isFlipped": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": 135,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 17,
+                        "y": 1
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                    },
+                    "type": "Sprite",
+                    "imagePath": "tile_0002.png",
+                    "isFlipped": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": 136,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 16,
+                        "y": 1
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                    },
+                    "type": "Sprite",
+                    "imagePath": "tile_0001.png",
+                    "isFlipped": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": 137,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 14,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                    },
+                    "type": "Sprite",
+                    "imagePath": "tile_0015.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Test",
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": 138,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 14,
+                        "y": 4
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                    },
+                    "type": "Sprite",
+                    "imagePath": "tile_0008.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Test",
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": 139,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 19,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                    },
+                    "type": "Sprite",
+                    "imagePath": "tile_0007.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Test",
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": 140,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 17,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                    },
+                    "type": "Sprite",
+                    "imagePath": "tile_0007.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Test",
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": 141,
             "components": [
                 {
                     "rotation": 0,
@@ -3931,12 +4136,48 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 135,
+            "id": 142,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 10,
+                        "x": 20,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                    },
+                    "type": "Sprite",
+                    "imagePath": "tile_0007.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Test",
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": 143,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 13,
                         "y": 4
                     },
                     "type": "Transform",
@@ -3949,23 +4190,36 @@
                     "crop": {
                     },
                     "type": "Sprite",
-                    "imagePath": "tile_0000.png",
+                    "imagePath": "tile_0007.png",
                     "isFlipped": false
+                },
+                {
+                    "tag": "Test",
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider"
                 }
             ]
         },
         {
             "isActive": true,
-            "name": "tile2",
+            "name": "Player",
             "scripts": [
+                {
+                    "name": "PlayerMovement",
+                    "parameters": [
+                    ]
+                }
             ],
-            "id": 136,
+            "id": 144,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 14,
-                        "y": 0
+                        "x": 1,
+                        "y": 5
                     },
                     "type": "Transform",
                     "scale": {
@@ -3977,23 +4231,62 @@
                     "crop": {
                     },
                     "type": "Sprite",
-                    "imagePath": "tile_0000.png",
+                    "imagePath": "PlayerWalkNoGun.png",
                     "isFlipped": false
+                },
+                {
+                    "tag": "Test",
+                    "size": {
+                        "x": 0.699999988079071,
+                        "y": 1
+                    },
+                    "type": "Collider"
+                },
+                {
+                    "mass": 1,
+                    "type": "Rigidbody"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 60,
+                            "frames": [
+                                {
+                                    "x": 0,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 17,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
                 }
             ]
         },
         {
             "isActive": true,
-            "name": "tile2",
+            "name": "New entity",
             "scripts": [
+                {
+                    "name": "Enemy",
+                    "parameters": [
+                    ]
+                }
             ],
-            "id": 137,
+            "id": 145,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 15,
-                        "y": 0
+                        "x": 18,
+                        "y": 3
                     },
                     "type": "Transform",
                     "scale": {
@@ -4005,64 +4298,42 @@
                     "crop": {
                     },
                     "type": "Sprite",
-                    "imagePath": "tile_0000.png",
+                    "imagePath": "Bee.png",
                     "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 138,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 17,
-                        "y": 1
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
                 },
                 {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0002.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 139,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 16,
-                        "y": 1
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
+                    "animations": [
+                        {
+                            "animatedFPS": 60,
+                            "frames": [
+                                {
+                                    "x": 0,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 17,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
                 },
                 {
-                    "crop": {
+                    "mass": 1,
+                    "type": "Rigidbody"
+                },
+                {
+                    "tag": "Test",
+                    "size": {
+                        "x": 1,
+                        "y": 1
                     },
-                    "type": "Sprite",
-                    "imagePath": "tile_0001.png",
-                    "isFlipped": false
+                    "type": "Collider"
                 }
             ]
         }

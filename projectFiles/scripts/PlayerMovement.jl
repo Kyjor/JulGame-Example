@@ -80,6 +80,9 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             this.parent.getRigidbody().setVelocity(Vector2f(x, y))
             x = 0
             this.isJump = false
+            if this.parent.getTransform().position.y > 8
+                this.parent.getTransform().position = Vector2f(1, 4)
+            end
         end
     elseif s == :setParent
         function(parent)
