@@ -41,7 +41,10 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             speed = 5
             input = MAIN.input
             y = this.parent.getRigidbody().getVelocity().y
-            if (input.getButtonPressed("SPACE")|| this.isJump) && this.parent.getRigidbody().grounded && this.canMove
+            # Inputs match SDL2 scancodes after "SDL_SCANCODE_"
+            # https://wiki.libsdl.org/SDL2/SDL_Scancode
+            # Spaces full scancode is "SDL_SCANCODE_SPACE" so we use "SPACE". Every other key is the same.
+            if (input.getButtonPressed("SPACE")|| this.isJump) && this.parent.getRigidbody().grounded && this.canMove 
                 this.animator.currentAnimation.animatedFPS = 0
                 this.animator.forceSpriteUpdate(2)
 

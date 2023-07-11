@@ -1410,7 +1410,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 6,
+                        "x": 8,
                         "y": 3
                     },
                     "type": "Transform",
@@ -1466,7 +1466,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 8,
+                        "x": 6,
                         "y": 3
                     },
                     "type": "Transform",
@@ -1624,11 +1624,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -1996,11 +2001,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -2032,11 +2042,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -2068,11 +2083,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -2433,11 +2453,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -2469,11 +2494,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -2505,11 +2535,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -2541,11 +2576,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -2577,11 +2617,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -2613,11 +2658,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -2649,11 +2699,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -2685,11 +2740,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -2721,11 +2781,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -2785,11 +2850,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 0.8500000238418579,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -2849,11 +2919,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -2885,11 +2960,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -3117,11 +3197,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -3293,11 +3378,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -3831,11 +3921,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -3979,11 +4074,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -4015,11 +4115,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -4051,11 +4156,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -4087,11 +4197,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -4123,11 +4238,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -4159,11 +4279,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -4195,11 +4320,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         },
@@ -4236,11 +4366,16 @@
                 },
                 {
                     "tag": "Test",
-                    "size": {
-                        "x": 0.699999988079071,
-                        "y": 1
+                    "offset": {
+                        "x": 0.3,
+                        "y": 0.05
                     },
-                    "type": "Collider"
+                    "size": {
+                        "x": 0.5,
+                        "y": 0.9
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
                 },
                 {
                     "mass": 1,
@@ -4304,7 +4439,7 @@
                 {
                     "animations": [
                         {
-                            "animatedFPS": 60,
+                            "animatedFPS": 2,
                             "frames": [
                                 {
                                     "x": 0,
@@ -4329,11 +4464,16 @@
                 },
                 {
                     "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
                     "size": {
                         "x": 1,
                         "y": 1
                     },
-                    "type": "Collider"
+                    "type": "Collider",
+                    "isTrigger": false
                 }
             ]
         }
