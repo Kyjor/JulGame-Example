@@ -1,5 +1,6 @@
 using JulGame.Macros
 using JulGame.MainLoop
+using JulGame.SoundSourceModule
 
 mutable struct PlayerMovement
     animator
@@ -7,16 +8,18 @@ mutable struct PlayerMovement
     input
     isFacingRight
     isJump 
+    jumpSound
     parent
 
     function PlayerMovement()
         this = new()
-        
+
         this.canMove = false
         this.input = C_NULL
         this.isFacingRight = true
         this.isJump = false
         this.parent = C_NULL
+        this.jumpSound = SoundSourceModule.SoundSource(joinpath(pwd(),"..",".."), "Jump.wav", 1, 50)
 
         return this
     end
@@ -47,6 +50,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             if (input.getButtonPressed("SPACE")|| this.isJump) && this.parent.getRigidbody().grounded && this.canMove 
                 this.animator.currentAnimation.animatedFPS = 0
                 this.animator.forceSpriteUpdate(2)
+                this.jumpSound.toggleSound()
 
                 this.parent.getRigidbody().grounded = false
                 y = -5.0
