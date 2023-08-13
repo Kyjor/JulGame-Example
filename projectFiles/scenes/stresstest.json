@@ -1620,7 +1620,7 @@
                     },
                     "type": "Sprite",
                     "imagePath": "tile_0050.png",
-                    "isFlipped": true
+                    "isFlipped": false
                 },
                 {
                     "tag": "Test",
@@ -2024,7 +2024,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 20,
+                        "x": 18,
                         "y": 5
                     },
                     "type": "Transform",
@@ -2065,7 +2065,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 24,
+                        "x": 21,
                         "y": 5
                     },
                     "type": "Transform",
@@ -2183,8 +2183,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 3,
-                        "y": 5
+                        "x": 10,
+                        "y": 4
                     },
                     "type": "Transform",
                     "scale": {
@@ -2435,7 +2435,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 24,
+                        "x": 21,
                         "y": 6
                     },
                     "type": "Transform",
@@ -2901,7 +2901,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 18,
+                        "x": 11,
                         "y": 6
                     },
                     "type": "Transform",
@@ -2942,8 +2942,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 24,
-                        "y": 7
+                        "x": 14,
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -3276,8 +3276,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 18,
-                        "y": 8
+                        "x": 11,
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -3332,8 +3332,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 24,
-                        "y": 8
+                        "x": 14,
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -3903,7 +3903,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 18,
+                        "x": 16,
                         "y": 5
                     },
                     "type": "Transform",
@@ -4138,7 +4138,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 23,
+                        "x": 19,
                         "y": 5
                     },
                     "type": "Transform",
@@ -4179,7 +4179,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 19,
+                        "x": 17,
                         "y": 5
                     },
                     "type": "Transform",
@@ -4261,7 +4261,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 21,
+                        "x": 20,
                         "y": 5
                     },
                     "type": "Transform",
@@ -4348,6 +4348,158 @@
                 {
                     "rotation": 0,
                     "position": {
+                        "x": 5,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "PlayerWalkNoGun.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Test",
+                    "offset": {
+                        "x": 0.3,
+                        "y": 0.05
+                    },
+                    "size": {
+                        "x": 0.5,
+                        "y": 0.9
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "mass": 1,
+                    "type": "Rigidbody"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 60,
+                            "frames": [
+                                {
+                                    "x": 0,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 17,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "New entity",
+            "scripts": [
+                {
+                    "name": "Enemy",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 145,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 18,
+                        "y": 3
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Bee.png",
+                    "isFlipped": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 2,
+                            "frames": [
+                                {
+                                    "x": 0,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 17,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                },
+                {
+                    "mass": 1,
+                    "type": "Rigidbody"
+                },
+                {
+                    "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Player",
+            "scripts": [
+                {
+                    "name": "PlayerMovement",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 146,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
                         "x": 1,
                         "y": 5
                     },
@@ -4411,21 +4563,21 @@
         },
         {
             "isActive": true,
-            "name": "Bee",
+            "name": "Player",
             "scripts": [
                 {
-                    "name": "Enemy",
+                    "name": "PlayerMovement",
                     "parameters": [
                     ]
                 }
             ],
-            "id": 145,
+            "id": 147,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 21,
-                        "y": 3
+                        "x": 3,
+                        "y": 4
                     },
                     "type": "Transform",
                     "scale": {
@@ -4441,13 +4593,30 @@
                         "y": 0
                     },
                     "type": "Sprite",
-                    "imagePath": "Bee.png",
-                    "isFlipped": true
+                    "imagePath": "PlayerWalkNoGun.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Test",
+                    "offset": {
+                        "x": 0.3,
+                        "y": 0.05
+                    },
+                    "size": {
+                        "x": 0.5,
+                        "y": 0.9
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "mass": 1,
+                    "type": "Rigidbody"
                 },
                 {
                     "animations": [
                         {
-                            "animatedFPS": 2,
+                            "animatedFPS": 60,
                             "frames": [
                                 {
                                     "x": 0,
@@ -4465,37 +4634,25 @@
                         }
                     ],
                     "type": "Animator"
-                },
-                {
-                    "mass": 1,
-                    "type": "Rigidbody"
-                },
-                {
-                    "tag": "Test",
-                    "offset": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "size": {
-                        "x": 1,
-                        "y": 1
-                    },
-                    "type": "Collider",
-                    "isTrigger": false
                 }
             ]
         },
         {
             "isActive": true,
-            "name": "tile2",
+            "name": "Player",
             "scripts": [
+                {
+                    "name": "PlayerMovement",
+                    "parameters": [
+                    ]
+                }
             ],
-            "id": 146,
+            "id": 148,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 22,
+                        "x": 3,
                         "y": 5
                     },
                     "type": "Transform",
@@ -4506,107 +4663,73 @@
                 },
                 {
                     "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
                     },
                     "type": "Sprite",
-                    "imagePath": "tile_0007.png",
+                    "imagePath": "PlayerWalkNoGun.png",
                     "isFlipped": false
                 },
                 {
                     "tag": "Test",
                     "offset": {
-                        "x": 0,
-                        "y": 0
+                        "x": 0.3,
+                        "y": 0.05
                     },
                     "size": {
-                        "x": 1,
-                        "y": 1
+                        "x": 0.5,
+                        "y": 0.9
                     },
                     "type": "Collider",
                     "isTrigger": false
+                },
+                {
+                    "mass": 1,
+                    "type": "Rigidbody"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 60,
+                            "frames": [
+                                {
+                                    "x": 0,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 17,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
                 }
             ]
         },
         {
             "isActive": true,
-            "name": "tile2",
+            "name": "Player",
             "scripts": [
-            ],
-            "id": 147,
-            "components": [
                 {
-                    "rotation": 0,
-                    "position": {
-                        "x": 14,
-                        "y": 6
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0015.png",
-                    "isFlipped": false
-                },
-                {
-                    "tag": "Test",
-                    "offset": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "size": {
-                        "x": 1,
-                        "y": 1
-                    },
-                    "type": "Collider",
-                    "isTrigger": false
+                    "name": "PlayerMovement",
+                    "parameters": [
+                    ]
                 }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 148,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 14,
-                        "y": 7
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0018.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
             ],
             "id": 149,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 18,
-                        "y": 7
+                        "x": 3,
+                        "y": 5
                     },
                     "type": "Transform",
                     "scale": {
@@ -4616,38 +4739,73 @@
                 },
                 {
                     "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
                     },
                     "type": "Sprite",
-                    "imagePath": "tile_0013.png",
+                    "imagePath": "PlayerWalkNoGun.png",
                     "isFlipped": false
                 },
                 {
                     "tag": "Test",
                     "offset": {
-                        "x": 0,
-                        "y": 0
+                        "x": 0.3,
+                        "y": 0.05
                     },
                     "size": {
-                        "x": 1,
-                        "y": 1
+                        "x": 0.5,
+                        "y": 0.9
                     },
                     "type": "Collider",
                     "isTrigger": false
+                },
+                {
+                    "mass": 1,
+                    "type": "Rigidbody"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 60,
+                            "frames": [
+                                {
+                                    "x": 0,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 17,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
                 }
             ]
         },
         {
             "isActive": true,
-            "name": "tile2",
+            "name": "Player",
             "scripts": [
+                {
+                    "name": "PlayerMovement",
+                    "parameters": [
+                    ]
+                }
             ],
             "id": 150,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 11,
-                        "y": 7
+                        "x": 3,
+                        "y": 5
                     },
                     "type": "Transform",
                     "scale": {
@@ -4657,25 +4815,73 @@
                 },
                 {
                     "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
                     },
                     "type": "Sprite",
-                    "imagePath": "tile_0016.png",
+                    "imagePath": "PlayerWalkNoGun.png",
                     "isFlipped": false
+                },
+                {
+                    "tag": "Test",
+                    "offset": {
+                        "x": 0.3,
+                        "y": 0.05
+                    },
+                    "size": {
+                        "x": 0.5,
+                        "y": 0.9
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "mass": 1,
+                    "type": "Rigidbody"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 60,
+                            "frames": [
+                                {
+                                    "x": 0,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 17,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
                 }
             ]
         },
         {
             "isActive": true,
-            "name": "tile2",
+            "name": "Player",
             "scripts": [
+                {
+                    "name": "PlayerMovement",
+                    "parameters": [
+                    ]
+                }
             ],
             "id": 151,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 11,
-                        "y": 6
+                        "x": 3,
+                        "y": 5
                     },
                     "type": "Transform",
                     "scale": {
@@ -4685,23 +4891,281 @@
                 },
                 {
                     "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
                     },
                     "type": "Sprite",
-                    "imagePath": "tile_0013.png",
+                    "imagePath": "PlayerWalkNoGun.png",
                     "isFlipped": false
                 },
                 {
                     "tag": "Test",
                     "offset": {
-                        "x": 0,
-                        "y": 0
+                        "x": 0.3,
+                        "y": 0.05
                     },
                     "size": {
-                        "x": 1,
-                        "y": 1
+                        "x": 0.5,
+                        "y": 0.9
                     },
                     "type": "Collider",
                     "isTrigger": false
+                },
+                {
+                    "mass": 1,
+                    "type": "Rigidbody"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 60,
+                            "frames": [
+                                {
+                                    "x": 0,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 17,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Player",
+            "scripts": [
+                {
+                    "name": "PlayerMovement",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 152,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 3,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "PlayerWalkNoGun.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Test",
+                    "offset": {
+                        "x": 0.3,
+                        "y": 0.05
+                    },
+                    "size": {
+                        "x": 0.5,
+                        "y": 0.9
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "mass": 1,
+                    "type": "Rigidbody"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 60,
+                            "frames": [
+                                {
+                                    "x": 0,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 17,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Player",
+            "scripts": [
+                {
+                    "name": "PlayerMovement",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 153,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 3,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "PlayerWalkNoGun.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Test",
+                    "offset": {
+                        "x": 0.3,
+                        "y": 0.05
+                    },
+                    "size": {
+                        "x": 0.5,
+                        "y": 0.9
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "mass": 1,
+                    "type": "Rigidbody"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 60,
+                            "frames": [
+                                {
+                                    "x": 0,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 17,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Player",
+            "scripts": [
+                {
+                    "name": "PlayerMovement",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 154,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 3,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "PlayerWalkNoGun.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Test",
+                    "offset": {
+                        "x": 0.3,
+                        "y": 0.05
+                    },
+                    "size": {
+                        "x": 0.5,
+                        "y": 0.9
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "mass": 1,
+                    "type": "Rigidbody"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 60,
+                            "frames": [
+                                {
+                                    "x": 0,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 17,
+                                    "y": 0,
+                                    "w": 16,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
                 }
             ]
         }

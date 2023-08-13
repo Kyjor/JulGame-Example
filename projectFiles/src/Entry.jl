@@ -1,15 +1,14 @@
 # commented out to allow for direct execution of this file. If you want to build this project with PackageCompiler, uncomment all of the lines below
 #module Entry 
-    using JulGame.SceneBuilderModule
-    using SimpleDirectMediaLayer
-    const SDL2 = SimpleDirectMediaLayer 
+using JulGame.Math
+using JulGame.SceneBuilderModule
 
-    #function run()
-        SDL2.init()
+#function run()
         dir = @__DIR__
         #dir = pwd()
-        main = Scene(joinpath(dir, "..", ".."), "scene.json")
-        return main.init()
+        scene = Scene(joinpath(dir, "..", ".."), "scene.json")
+        main = scene.init(false, Vector2(1280, 720))
+        return main
     #end
 
     #julia_main() = run()

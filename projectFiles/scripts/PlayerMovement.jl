@@ -25,9 +25,9 @@ end
 function Base.getproperty(this::PlayerMovement, s::Symbol)
     if s == :initialize
         function()
-            println("PlayerMovement initialize")
+            #println("PlayerMovement initialize")
             event = @event begin
-                this.jump()
+                #this.jump()
             end
             MAIN.scene.camera.target = this.parent.getTransform()
             this.animator = this.parent.getAnimator()
