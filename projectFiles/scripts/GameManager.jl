@@ -28,15 +28,18 @@ end
 function Base.getproperty(this::GameManager, s::Symbol)
     if s == :initialize
         function()
+            MAIN.scene.camera.target = JulGame.TransformModule.Transform(JulGame.Math.Vector2f(-3,2))
+            MAIN.cameraBackgroundColor = [0, 128, 128]
+            return
             Firebase.realdb_init("https://multiplayer-demo-2f287-default-rtdb.firebaseio.com")
             Firebase.set_webapikey("AIzaSyCxuzQNfmIMijosSYn8UWfQGOrQYARJ4iE")
             this.user = Firebase.firebase_signinanon()
             initialPlayerState = Dict("id" => this.user["localId"], "name" => "toto", "direction" => "right", "color" => "blue", "x" => 3, "y" => 3, "coins" => 0)
             this.playerId = Firebase.realdb_postRealTime("/players/$(this.user["localId"])",initialPlayerState, this.user["idToken"])["name"]
-            MAIN.cameraBackgroundColor = [252, 223, 205]
         end
     elseif s == :update
         function(deltaTime)
+            return
             if this.task != C_NULL # Not sure why this is needed, but it doesn't work without it
                 try
                     print("")
@@ -98,6 +101,7 @@ function Base.getproperty(this::GameManager, s::Symbol)
         end
     elseif s == :onShutDown
         function ()
+            return
             println("shut down")
             Firebase.realdb_deleteRealTime("/players/$(this.user["localId"])", this.user["idToken"])
         end

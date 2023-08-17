@@ -7,7 +7,7 @@ using JulGame.SceneBuilderModule
         dir = @__DIR__
         #dir = pwd()
         scene = Scene(joinpath(dir, "..", ".."), "scene.json")
-        main = scene.init(false, Vector2(1280, 720))
+        main = scene.init(false, Vector2(1280, 720), 1.25)
         return main
     #end
 

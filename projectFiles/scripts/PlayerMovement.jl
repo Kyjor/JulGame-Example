@@ -31,67 +31,45 @@ end
 function Base.getproperty(this::PlayerMovement, s::Symbol)
     if s == :initialize
         function()
-            MAIN.scene.camera.target = this.parent.getTransform()
             this.animator = this.parent.getAnimator()
             this.animator.currentAnimation = this.animator.animations[1]
             this.animator.currentAnimation.animatedFPS = 0
         end
     elseif s == :update
         function(deltaTime)
-
             this.canMove = true
-            x = 0
-            speed = 5
             input = MAIN.input
-            y = this.parent.getRigidbody().getVelocity().y
+            currentPosition = this.parent.getTransform().position
             # Inputs match SDL2 scancodes after "SDL_SCANCODE_"
             # https://wiki.libsdl.org/SDL2/SDL_Scancode
             # Spaces full scancode is "SDL_SCANCODE_SPACE" so we use "SPACE". Every other key is the same.
-            if (input.getButtonPressed("SPACE")|| this.isJump) && this.parent.getRigidbody().grounded && this.canMove 
-               
-                this.animator.currentAnimation.animatedFPS = 0
-                this.animator.forceSpriteUpdate(2)
-                this.jumpSound.toggleSound()
-
-                this.parent.getRigidbody().grounded = false
-                y = -5.0
-
-            end
             if input.getButtonHeldDown("A") && this.canMove
-                if input.getButtonPressed("A")
-                    this.animator.forceSpriteUpdate(2)
-                end
-                x = -speed
-                if this.parent.getRigidbody().grounded
-                    this.animator.currentAnimation.animatedFPS = 5
+                if input.getButtonPressed("A") && currentPosition.x > -4
+                    this.parent.getTransform().position = JulGame.Math.Vector2f(currentPosition.x - 1, currentPosition.y)
                 end
                 if this.isFacingRight
                     this.isFacingRight = false
                     this.parent.getSprite().flip()
                 end
             elseif input.getButtonHeldDown("D") && this.canMove
-                if input.getButtonPressed("D")
-                    this.animator.forceSpriteUpdate(2)
+                if input.getButtonPressed("D") && currentPosition.x < 8
+                    this.parent.getTransform().position = JulGame.Math.Vector2f(currentPosition.x + 1, currentPosition.y)
                 end
-                if this.parent.getRigidbody().grounded
-                    this.animator.currentAnimation.animatedFPS = 5
-                end
-                x = speed
                 if !this.isFacingRight
                     this.isFacingRight = true
                     this.parent.getSprite().flip()
                 end
-            elseif this.parent.getRigidbody().grounded
-                this.animator.currentAnimation.animatedFPS = 0
-                this.animator.forceSpriteUpdate(1)
+            elseif input.getButtonHeldDown("W") && this.canMove
+                if input.getButtonPressed("W") && currentPosition.y > 1
+                    this.parent.getTransform().position = JulGame.Math.Vector2f(currentPosition.x, currentPosition.y - 1)
+                end
+            elseif input.getButtonHeldDown("S") && this.canMove
+                if input.getButtonPressed("S") && currentPosition.y < 8
+                    this.parent.getTransform().position = JulGame.Math.Vector2f(currentPosition.x, currentPosition.y + 1)
+                end
             end
             
-            this.parent.getRigidbody().setVelocity(Vector2f(x, y))
-            x = 0
             this.isJump = false
-            if this.parent.getTransform().position.y > 8
-                this.parent.getTransform().position = Vector2f(1, 4)
-            end
         end
     elseif s == :setParent
         function(parent)

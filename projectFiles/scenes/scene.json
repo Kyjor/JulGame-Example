@@ -28,7 +28,7 @@
         },
         {
             "isActive": true,
-            "name": "tile2",
+            "name": "Background",
             "scripts": [
             ],
             "id": 2,
@@ -36,116 +36,21 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 1,
-                        "y": 6
+                        "x": -5.03000020980835,
+                        "y": -2.85
                     },
                     "type": "Transform",
                     "scale": {
-                        "x": 1,
-                        "y": 1
+                        "x": 15,
+                        "y": 12.75
                     }
                 },
                 {
                     "crop": {
                     },
                     "type": "Sprite",
-                    "imagePath": "tile_0007.png",
+                    "imagePath": "map.png",
                     "isFlipped": false
-                },
-                {
-                    "tag": "Test",
-                    "offset": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "size": {
-                        "x": 1,
-                        "y": 1
-                    },
-                    "type": "Collider",
-                    "isTrigger": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 3,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 3,
-                        "y": 6
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0007.png",
-                    "isFlipped": false
-                },
-                {
-                    "tag": "Test",
-                    "offset": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "size": {
-                        "x": 1,
-                        "y": 1
-                    },
-                    "type": "Collider",
-                    "isTrigger": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 4,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 2,
-                        "y": 6
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0007.png",
-                    "isFlipped": false
-                },
-                {
-                    "tag": "Test",
-                    "offset": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "size": {
-                        "x": 1,
-                        "y": 1
-                    },
-                    "type": "Collider",
-                    "isTrigger": false
                 }
             ]
         },
@@ -159,7 +64,7 @@
                     ]
                 }
             ],
-            "id": 5,
+            "id": 3,
             "components": [
                 {
                     "rotation": 0,
@@ -196,10 +101,6 @@
                     },
                     "type": "Collider",
                     "isTrigger": false
-                },
-                {
-                    "mass": 1,
-                    "type": "Rigidbody"
                 },
                 {
                     "animations": [
