@@ -25,7 +25,7 @@ mutable struct PlayerMovement
         this.parent = C_NULL
         this.jumpSound = SoundSourceModule.SoundSource(joinpath(pwd(),"..",".."), "Jump.wav", 1, 50)
         this.gameManager = MAIN.scene.entities[1].scripts[1]
-        this.timeBetweenMoves = 1.0/2.0
+        this.timeBetweenMoves = 1.0/6.0
         this.timer = 0.0
         this.blockedSpaces = Dict(
             "7x4"=> true,
@@ -40,7 +40,6 @@ mutable struct PlayerMovement
             "7x9"=> true,
             "8x9"=> true,
             "9x9"=> true)
-
         
         return this
     end
@@ -55,7 +54,6 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
         end
     elseif s == :update
         function(deltaTime)
-            this.canMove = true
             input = MAIN.input
             currentPosition = this.parent.getTransform().position
             # Inputs match SDL2 scancodes after "SDL_SCANCODE_"
@@ -69,7 +67,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                     this.isFacingRight = false
                     this.parent.getSprite().flip()
                 end
-            elseif input.getButtonHeldDown("D")
+            elseif input.getButtonHeldDown("D") && this.canMove
                 if input.getButtonPressed("D")  && this.canPlayerMoveHere(JulGame.Math.Vector2f(currentPosition.x + 1, currentPosition.y))
                     this.parent.getTransform().position = JulGame.Math.Vector2f(currentPosition.x + 1, currentPosition.y)
                 end
@@ -86,12 +84,20 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                     this.parent.getTransform().position = JulGame.Math.Vector2f(currentPosition.x, currentPosition.y + 1)
                 end
             end
-            
+
+            this.timer += deltaTime
+            if this.timer >= this.timeBetweenMoves
+                this.canMove = true
+            end
+
             this.isJump = false
         end
     elseif s == :canPlayerMoveHere
         function(nextPosition)
             if nextPosition.x > -5 && nextPosition.x < 9 && nextPosition.y > 0 && nextPosition.y < 9 && !(haskey(this.blockedSpaces, "$(Int(nextPosition.x) + 5)x$(Int(nextPosition.y) + 3)"))
+                this.canMove = false
+                this.timer = 0.0
+                this.gameManager.updatePos(nextPosition)
                 return true
             end
 
