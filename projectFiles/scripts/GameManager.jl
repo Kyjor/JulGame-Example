@@ -30,11 +30,13 @@ function Base.getproperty(this::GameManager, s::Symbol)
         function()
             MAIN.scene.camera.target = JulGame.TransformModule.Transform(JulGame.Math.Vector2f(-3,2))
             MAIN.cameraBackgroundColor = [0, 128, 128]
+            #println("Name: $(MAIN.globals[1])")
+            name = MAIN.globals[1]
             return
             Firebase.realdb_init("https://multiplayer-demo-2f287-default-rtdb.firebaseio.com")
             Firebase.set_webapikey("AIzaSyCxuzQNfmIMijosSYn8UWfQGOrQYARJ4iE")
             this.user = Firebase.firebase_signinanon()
-            initialPlayerState = Dict("id" => this.user["localId"], "name" => "toto", "direction" => "right", "color" => "blue", "x" => 3, "y" => 3, "coins" => 0)
+            initialPlayerState = Dict("id" => this.user["localId"], "name" => name, "direction" => "right", "color" => "blue", "x" => 3, "y" => 3, "coins" => 0)
             this.playerId = Firebase.realdb_postRealTime("/players/$(this.user["localId"])",initialPlayerState, this.user["idToken"])["name"]
         end
     elseif s == :update

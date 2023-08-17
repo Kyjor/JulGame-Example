@@ -4,6 +4,7 @@ using JulGame.SoundSourceModule
 
 mutable struct PlayerMovement
     animator
+    blockedSpaces
     canMove
     gameManager
     input
@@ -11,7 +12,8 @@ mutable struct PlayerMovement
     isJump 
     jumpSound
     parent
-
+    timeBetweenMoves
+    timer
 
     function PlayerMovement()
         this = new()
@@ -23,7 +25,23 @@ mutable struct PlayerMovement
         this.parent = C_NULL
         this.jumpSound = SoundSourceModule.SoundSource(joinpath(pwd(),"..",".."), "Jump.wav", 1, 50)
         this.gameManager = MAIN.scene.entities[1].scripts[1]
+        this.timeBetweenMoves = 1.0/2.0
+        this.timer = 0.0
+        this.blockedSpaces = Dict(
+            "7x4"=> true,
+            "1x11"=> true,
+            "12x10"=> true,
+            "4x7"=> true,
+            "5x7"=> true,
+            "6x7"=> true,
+            "8x6"=> true,
+            "9x6"=> true,
+            "10x6"=> true,
+            "7x9"=> true,
+            "8x9"=> true,
+            "9x9"=> true)
 
+        
         return this
     end
 end
@@ -44,15 +62,15 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             # https://wiki.libsdl.org/SDL2/SDL_Scancode
             # Spaces full scancode is "SDL_SCANCODE_SPACE" so we use "SPACE". Every other key is the same.
             if input.getButtonHeldDown("A") && this.canMove
-                if input.getButtonPressed("A") && currentPosition.x > -4
+                if input.getButtonPressed("A") && this.canPlayerMoveHere(JulGame.Math.Vector2f(currentPosition.x - 1, currentPosition.y))
                     this.parent.getTransform().position = JulGame.Math.Vector2f(currentPosition.x - 1, currentPosition.y)
                 end
                 if this.isFacingRight
                     this.isFacingRight = false
                     this.parent.getSprite().flip()
                 end
-            elseif input.getButtonHeldDown("D") && this.canMove
-                if input.getButtonPressed("D") && currentPosition.x < 8
+            elseif input.getButtonHeldDown("D")
+                if input.getButtonPressed("D")  && this.canPlayerMoveHere(JulGame.Math.Vector2f(currentPosition.x + 1, currentPosition.y))
                     this.parent.getTransform().position = JulGame.Math.Vector2f(currentPosition.x + 1, currentPosition.y)
                 end
                 if !this.isFacingRight
@@ -60,16 +78,24 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                     this.parent.getSprite().flip()
                 end
             elseif input.getButtonHeldDown("W") && this.canMove
-                if input.getButtonPressed("W") && currentPosition.y > 1
+                if input.getButtonPressed("W") && this.canPlayerMoveHere(JulGame.Math.Vector2f(currentPosition.x, currentPosition.y - 1))
                     this.parent.getTransform().position = JulGame.Math.Vector2f(currentPosition.x, currentPosition.y - 1)
                 end
             elseif input.getButtonHeldDown("S") && this.canMove
-                if input.getButtonPressed("S") && currentPosition.y < 8
+                if input.getButtonPressed("S") && this.canPlayerMoveHere(JulGame.Math.Vector2f(currentPosition.x, currentPosition.y + 1))
                     this.parent.getTransform().position = JulGame.Math.Vector2f(currentPosition.x, currentPosition.y + 1)
                 end
             end
             
             this.isJump = false
+        end
+    elseif s == :canPlayerMoveHere
+        function(nextPosition)
+            if nextPosition.x > -5 && nextPosition.x < 9 && nextPosition.y > 0 && nextPosition.y < 9 && !(haskey(this.blockedSpaces, "$(Int(nextPosition.x) + 5)x$(Int(nextPosition.y) + 3)"))
+                return true
+            end
+
+            return false
         end
     elseif s == :setParent
         function(parent)
