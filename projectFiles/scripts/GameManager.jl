@@ -2,6 +2,7 @@ using JulGame.MainLoop
 using Firebase
 
 mutable struct GameManager
+    otherPlayers
     parent
     playerId
     results
@@ -18,6 +19,7 @@ mutable struct GameManager
         this.tickRate = 2
         this.tickTimer = 0.0
         this.task = C_NULL
+        this.otherPlayers = Dict()
 
         return this
     end
@@ -45,7 +47,7 @@ function Base.getproperty(this::GameManager, s::Symbol)
                 end
             end
             if this.roomState != C_NULL
-                println(this.roomState)
+                this.processRoomState()
                 this.roomState = C_NULL
             end
             this.tickTimer += deltaTime
@@ -67,6 +69,31 @@ function Base.getproperty(this::GameManager, s::Symbol)
                 print(e)
             end
             this.roomState = res
+        end
+    elseif s == :processRoomState
+        function ()
+            for player in this.roomState
+                playerId = ""
+                for key in keys(player.second) # only loops once
+                    playerId = key
+                end
+                if haskey(player.second, this.playerId) # local player
+                    println("my player")
+                    println(player.second[this.playerId])
+                elseif haskey(this.otherPlayers, playerId) # update existing other player
+                    println("update existing player")
+                    this.otherPlayers[playerId] = player.second[playerId]
+                elseif !haskey(this.otherPlayers, playerId) # add new other player
+                    println("new player has joined")
+                    this.otherPlayers[playerId] = player.second[playerId]
+                    this.spawnOtherPlayer()
+                # todo: remove player
+                end
+            end
+        end
+    elseif s == :spawnOtherPlayer
+        function ()
+            println("spawn")
         end
     elseif s == :onShutDown
         function ()
