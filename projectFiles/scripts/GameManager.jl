@@ -93,7 +93,8 @@ function Base.getproperty(this::GameManager, s::Symbol)
         end
     elseif s == :spawnOtherPlayer
         function ()
-            println("spawn")
+            newPlayer = deepcopy(MAIN.scene.entities[5])
+            push!(MAIN.scene.entities, newPlayer)
         end
     elseif s == :onShutDown
         function ()
