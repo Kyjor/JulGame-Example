@@ -14,7 +14,6 @@ mutable struct PlayerMovement
     positionBeforeMoving
     targetPosition
     timeBetweenMoves
-    timeToMove
     timer
     moveTimer
 
@@ -27,8 +26,7 @@ mutable struct PlayerMovement
         this.parent = C_NULL
         this.jumpSound = SoundSourceModule.SoundSource(joinpath(pwd(),"..",".."), "Jump.wav", 1, 50)
         this.gameManager = MAIN.scene.entities[1].scripts[1]
-        this.timeBetweenMoves = 1.0/6.0
-        this.timeToMove = 0.25
+        this.timeBetweenMoves = 0.2
         this.timer = 0.0
         this.moveTimer = 0.0
         this.targetPosition = JulGame.Math.Vector2f()
@@ -106,8 +104,8 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
     elseif s == :movePlayerSmoothly
         function()
             this.canMove = false
-            this.parent.getTransform().position = JulGame.Math.Vector2f(JulGame.Math.SmoothLerp(this.positionBeforeMoving.x, this.targetPosition.x, this.moveTimer/this.timeToMove), JulGame.Math.SmoothLerp(this.positionBeforeMoving.y, this.targetPosition.y, this.moveTimer/this.timeToMove))
-            if (this.moveTimer/this.timeToMove) >= 1
+            this.parent.getTransform().position = JulGame.Math.Vector2f(JulGame.Math.SmoothLerp(this.positionBeforeMoving.x, this.targetPosition.x, this.moveTimer/this.timeBetweenMoves), JulGame.Math.SmoothLerp(this.positionBeforeMoving.y, this.targetPosition.y, this.moveTimer/this.timeBetweenMoves))
+            if (this.moveTimer/this.timeBetweenMoves) >= 1
                 this.moveTimer = 0.0
                 this.parent.getTransform().position = this.targetPosition
                 this.canMove = true
