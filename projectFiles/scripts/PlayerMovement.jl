@@ -1,4 +1,6 @@
+using JulGame.AnimationModule
 using JulGame.Macros
+using JulGame.Math
 using JulGame.MainLoop
 using JulGame.SoundSourceModule
 
@@ -19,7 +21,7 @@ mutable struct PlayerMovement
         this.isFacingRight = true
         this.isJump = false
         this.parent = C_NULL
-        this.jumpSound = SoundSourceModule.SoundSource(joinpath(pwd(),"..",".."), "Jump.wav", 1, 50)
+        this.jumpSound = SoundSourceModule.SoundSource(joinpath(pwd(),".."), "Jump.wav", 1, 50)
 
         return this
     end
@@ -39,6 +41,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
         end
     elseif s == :update
         function(deltaTime)
+            #println(GetAnimationTest(this.animator.currentAnimation))
             this.canMove = true
             x = 0
             speed = 5

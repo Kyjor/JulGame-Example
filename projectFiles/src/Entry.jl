@@ -1,15 +1,18 @@
-# commented out to allow for direct execution of this file. If you want to build this project with PackageCompiler, uncomment all of the lines below
-#module Entry 
-using JulGame.Math
-using JulGame.SceneBuilderModule
+module Entry 
+    using JulGame
+    using JulGame.Math
+    using JulGame.SceneBuilderModule
 
-#function run()
+    function run()
+        SDL2.init()
         dir = @__DIR__
         #dir = pwd()
-        scene = Scene(joinpath(dir, "..", ".."), "scene.json")
-        main = scene.init(false, Vector2(1280, 720))
+        scene = Scene(joinpath(dir, ".."), "scene.json")
+        main = scene.init(false, Vector2(1280, 720), 2.0)
         return main
-    #end
+    end
 
-    #julia_main() = run()
-#end
+    julia_main() = run()
+end
+# Uncommented to allow for direct execution of this file. If you want to build this project with PackageCompiler, comment the line below
+CoinGrabber.run()
