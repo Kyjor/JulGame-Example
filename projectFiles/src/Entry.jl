@@ -4,7 +4,6 @@ module Entry
     using JulGame.SceneBuilderModule
 
     function run()
-        SDL2.init()
         dir = @__DIR__
         #dir = pwd()
         scene = Scene(joinpath(dir, ".."), "scene.json")
