@@ -45,10 +45,6 @@ function Base.getproperty(this::Enemy, s::Symbol)
             end
         end
     else
-        try
-            getfield(this, s)
-        catch e
-            println(e)
-        end
+        getfield(this, s)
     end
 end

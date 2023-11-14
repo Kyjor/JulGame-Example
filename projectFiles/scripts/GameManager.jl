@@ -1,4 +1,6 @@
 using JulGame.MainLoop 
+using JulGame.Math
+using JulGame.UI
 
 mutable struct GameManager
     parent
@@ -14,6 +16,7 @@ function Base.getproperty(this::GameManager, s::Symbol)
     if s == :initialize
         function()
             MAIN.cameraBackgroundColor = [252, 223, 205]
+            push!(MAIN.scene.screenButtons, ScreenButtonModule.ScreenButton(joinpath(pwd(),".."), "ButtonUp.png", "ButtonDown.png", Vector2(256, 64), Vector2(), "test"))
         end
     elseif s == :update
         function(deltaTime)
@@ -23,10 +26,6 @@ function Base.getproperty(this::GameManager, s::Symbol)
             this.parent = parent
         end
     else
-        try
-            getfield(this, s)
-        catch e
-            println(e)
-        end
+        getfield(this, s)
     end
 end

@@ -112,10 +112,6 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             end
         end
     else
-        try
-            getfield(this, s)
-        catch e
-            println(e)
-        end
+        getfield(this, s)
     end
 end
