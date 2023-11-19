@@ -7,7 +7,7 @@ module Entry
         dir = @__DIR__
         #dir = pwd()
         scene = Scene(joinpath(dir, ".."), "scene.json")
-        main = scene.init(false, Vector2(1280, 720), 2.0)
+        main = scene.init(false, Vector2(576, 576),Vector2(576, 576), 2.0)
         return main
     end
 
