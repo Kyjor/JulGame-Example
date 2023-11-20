@@ -4,10 +4,8 @@ module Platformer
     using JulGame.SceneBuilderModule
 
     function run()
-        dir = @__DIR__
-        #dir = pwd()
-        scene = Scene(joinpath(dir, ".."), "scene.json")
-        main = scene.init(false, Vector2(576, 576),Vector2(576, 576), 1.0)
+        scene = Scene(joinpath(pwd(), ".."), "scene.json")
+        main = scene.init("JulGame Example", false, Vector2(576, 576),Vector2(576, 576), 1.0)
         return main
     end
 

@@ -13,6 +13,9 @@ mutable struct PlayerMovement
     jumpSound
     parent
 
+    xDir
+    yDir
+
     function PlayerMovement()
         this = new()
 
@@ -22,6 +25,9 @@ mutable struct PlayerMovement
         this.isJump = false
         this.parent = C_NULL
         this.jumpSound = SoundSourceModule.SoundSource(joinpath(pwd(),".."), "Jump.wav", 1, 50)
+
+        this.xDir = 0
+        this.yDir = 0
 
         return this
     end
@@ -47,10 +53,38 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             speed = 5
             input = MAIN.input
             y = this.parent.getRigidbody().getVelocity().y
+            JOYSTICK_DEAD_ZONE = 8000
+
+            # X axis motion
+            if input.jaxis.axis == 0
+                #println(input.jaxis.value)
+                # Left of dead zone
+                if input.jaxis.value < -JOYSTICK_DEAD_ZONE
+                    this.xDir = -1
+                # Right of dead zone
+                elseif input.jaxis.value > JOYSTICK_DEAD_ZONE
+                    this.xDir = 1
+                else
+                    this.xDir = 0
+                end
+            end
+            if input.jaxis.axis == 1
+                # Y axis motion
+                if input.jaxis.value < -JOYSTICK_DEAD_ZONE
+                    # Below of dead zone
+                    this.yDir = -1
+                elseif input.jaxis.value > JOYSTICK_DEAD_ZONE
+                    # Above of dead zone
+                    this.yDir = 1
+                else
+                    this.yDir = 0
+                end
+            end
+            # println("x:$(this.xDir), y:$(this.yDir)")
             # Inputs match SDL2 scancodes after "SDL_SCANCODE_"
             # https://wiki.libsdl.org/SDL2/SDL_Scancode
             # Spaces full scancode is "SDL_SCANCODE_SPACE" so we use "SPACE". Every other key is the same.
-            if (input.getButtonPressed("SPACE")|| this.isJump) && this.parent.getRigidbody().grounded && this.canMove 
+            if ((input.getButtonPressed("SPACE")  || this.yDir == 1)|| this.isJump) && this.parent.getRigidbody().grounded && this.canMove 
                 this.animator.currentAnimation.animatedFPS = 0
                 this.animator.forceSpriteUpdate(2)
                 this.jumpSound.toggleSound()
@@ -58,7 +92,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 this.parent.getRigidbody().grounded = false
                 y = -5.0
             end
-            if input.getButtonHeldDown("A") && this.canMove
+            if (input.getButtonHeldDown("A") || this.xDir == -1) && this.canMove
                 if input.getButtonPressed("A")
                     this.animator.forceSpriteUpdate(2)
                 end
@@ -70,7 +104,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                     this.isFacingRight = false
                     this.parent.getSprite().flip()
                 end
-            elseif input.getButtonHeldDown("D") && this.canMove
+            elseif (input.getButtonHeldDown("D")  || this.xDir == 1) && this.canMove
                 if input.getButtonPressed("D")
                     this.animator.forceSpriteUpdate(2)
                 end
