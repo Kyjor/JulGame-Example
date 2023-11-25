@@ -5,7 +5,7 @@ module Platformer
 
     function run()
         scene = Scene(joinpath(pwd(), ".."), "scene.json")
-        main = scene.init("JulGame Example", false, Vector2(1920, 1080),Vector2(576, 576), false, 1.0)
+        main = scene.init("JulGame Example", false, Vector2(1920, 1080),Vector2(576, 576), false, 1.0, true)
         return main
     end
 
