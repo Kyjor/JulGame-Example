@@ -2,682 +2,10 @@
     "Entities": [
         {
             "isActive": true,
-            "name": "tile1",
+            "name": "tile2",
             "scripts": [
             ],
             "id": 1,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 2,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 1,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 3,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 2,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 4,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 3,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 5,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 4,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0001.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 6,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 5,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0002.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 7,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 6,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 8,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 7,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 9,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 8,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 10,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 9,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 11,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 10,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 12,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 11,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 13,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 12,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 14,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 13,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 15,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 16,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 16,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 0,
-                        "y": 1
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 17,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 1,
-                        "y": 1
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 18,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 2,
-                        "y": 1
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 19,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 3,
-                        "y": 1
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 20,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 4,
-                        "y": 1
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 21,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 5,
-                        "y": 1
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 22,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 6,
-                        "y": 1
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 23,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 7,
-                        "y": 1
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 24,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 8,
-                        "y": 1
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 25,
             "components": [
                 {
                     "rotation": 0,
@@ -705,63 +33,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 26,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 10,
-                        "y": 1
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 27,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 11,
-                        "y": 1
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 28,
+            "id": 2,
             "components": [
                 {
                     "rotation": 0,
@@ -789,35 +61,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 29,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 14,
-                        "y": 1
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 30,
+            "id": 3,
             "components": [
                 {
                     "rotation": 0,
@@ -845,63 +89,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 31,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 0,
-                        "y": 2
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 32,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 1,
-                        "y": 2
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 33,
+            "id": 4,
             "components": [
                 {
                     "rotation": 0,
@@ -929,91 +117,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 34,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 3,
-                        "y": 2
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 35,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 4,
-                        "y": 2
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 36,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 5,
-                        "y": 2
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 37,
+            "id": 5,
             "components": [
                 {
                     "rotation": 0,
@@ -1041,7 +145,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 38,
+            "id": 6,
             "components": [
                 {
                     "rotation": 0,
@@ -1069,315 +173,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 39,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 8,
-                        "y": 2
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 40,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 9,
-                        "y": 2
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 41,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 10,
-                        "y": 2
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 42,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 11,
-                        "y": 2
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 43,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 12,
-                        "y": 2
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0017.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 44,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 14,
-                        "y": 2
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 45,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 0,
-                        "y": 3
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 46,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 1,
-                        "y": 3
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 47,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 2,
-                        "y": 3
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 48,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 3,
-                        "y": 3
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 49,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 4,
-                        "y": 3
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 50,
+            "id": 7,
             "components": [
                 {
                     "rotation": 0,
@@ -1405,35 +201,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 51,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 8,
-                        "y": 3
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 52,
+            "id": 8,
             "components": [
                 {
                     "rotation": 0,
@@ -1458,150 +226,10 @@
         },
         {
             "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 53,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 6,
-                        "y": 3
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 54,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 9,
-                        "y": 3
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 55,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 10,
-                        "y": 3
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 56,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 11,
-                        "y": 3
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 57,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 12,
-                        "y": 3
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
             "name": "Gun",
             "scripts": [
             ],
-            "id": 58,
+            "id": 9,
             "components": [
                 {
                     "rotation": 0,
@@ -1642,231 +270,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 59,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 14,
-                        "y": 3
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 60,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 0,
-                        "y": 4
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 61,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 1,
-                        "y": 4
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 62,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 2,
-                        "y": 4
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 63,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 3,
-                        "y": 4
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 64,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 4,
-                        "y": 4
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 65,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 5,
-                        "y": 4
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 66,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 6,
-                        "y": 4
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 67,
+            "id": 10,
             "components": [
                 {
                     "rotation": 0,
@@ -1894,91 +298,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 68,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 8,
-                        "y": 4
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 69,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 9,
-                        "y": 4
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 70,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 11,
-                        "y": 4
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 71,
+            "id": 11,
             "components": [
                 {
                     "rotation": 0,
@@ -2019,7 +339,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 72,
+            "id": 12,
             "components": [
                 {
                     "rotation": 0,
@@ -2060,7 +380,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 73,
+            "id": 13,
             "components": [
                 {
                     "rotation": 0,
@@ -2101,7 +421,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 74,
+            "id": 14,
             "components": [
                 {
                     "rotation": 0,
@@ -2129,28 +449,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 75,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": -1,
-                        "y": 5
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 76,
+            "id": 15,
             "components": [
                 {
                     "rotation": 0,
@@ -2178,35 +477,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 77,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 3,
-                        "y": 5
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 78,
+            "id": 16,
             "components": [
                 {
                     "rotation": 0,
@@ -2234,63 +505,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 79,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 5,
-                        "y": 5
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0010.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 80,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 6,
-                        "y": 5
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 81,
+            "id": 17,
             "components": [
                 {
                     "rotation": 0,
@@ -2318,35 +533,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 82,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 8,
-                        "y": 5
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 83,
+            "id": 18,
             "components": [
                 {
                     "rotation": 0,
@@ -2374,35 +561,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 84,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 10,
-                        "y": 5
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 85,
+            "id": 19,
             "components": [
                 {
                     "rotation": 0,
@@ -2430,7 +589,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 86,
+            "id": 20,
             "components": [
                 {
                     "rotation": 0,
@@ -2471,7 +630,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 87,
+            "id": 21,
             "components": [
                 {
                     "rotation": 0,
@@ -2512,7 +671,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 88,
+            "id": 22,
             "components": [
                 {
                     "rotation": 0,
@@ -2553,7 +712,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 89,
+            "id": 23,
             "components": [
                 {
                     "rotation": 0,
@@ -2594,7 +753,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 90,
+            "id": 24,
             "components": [
                 {
                     "rotation": 0,
@@ -2635,7 +794,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 91,
+            "id": 25,
             "components": [
                 {
                     "rotation": 0,
@@ -2676,7 +835,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 92,
+            "id": 26,
             "components": [
                 {
                     "rotation": 0,
@@ -2717,7 +876,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 93,
+            "id": 27,
             "components": [
                 {
                     "rotation": 0,
@@ -2758,7 +917,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 94,
+            "id": 28,
             "components": [
                 {
                     "rotation": 0,
@@ -2799,35 +958,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 95,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 8,
-                        "y": 6
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 96,
+            "id": 29,
             "components": [
                 {
                     "rotation": 0,
@@ -2855,7 +986,7 @@
                         "y": 0
                     },
                     "size": {
-                        "x": 0.8500000238418579,
+                        "x": 1,
                         "y": 1
                     },
                     "type": "Collider",
@@ -2868,35 +999,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 97,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 10,
-                        "y": 6
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 98,
+            "id": 30,
             "components": [
                 {
                     "rotation": 0,
@@ -2937,7 +1040,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 99,
+            "id": 31,
             "components": [
                 {
                     "rotation": 0,
@@ -2978,35 +1081,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 100,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 0,
-                        "y": 7
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 101,
+            "id": 32,
             "components": [
                 {
                     "rotation": 0,
@@ -3034,7 +1109,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 102,
+            "id": 33,
             "components": [
                 {
                     "rotation": 0,
@@ -3062,63 +1137,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 103,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 3,
-                        "y": 7
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 104,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 4,
-                        "y": 7
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 105,
+            "id": 34,
             "components": [
                 {
                     "rotation": 0,
@@ -3146,35 +1165,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 106,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 6,
-                        "y": 7
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 107,
+            "id": 35,
             "components": [
                 {
                     "rotation": 0,
@@ -3215,63 +1206,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 108,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 8,
-                        "y": 7
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 109,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 10,
-                        "y": 7
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 110,
+            "id": 36,
             "components": [
                 {
                     "rotation": 0,
@@ -3299,35 +1234,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 111,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 15,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 112,
+            "id": 37,
             "components": [
                 {
                     "rotation": 0,
@@ -3355,7 +1262,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 113,
+            "id": 38,
             "components": [
                 {
                     "rotation": 0,
@@ -3396,91 +1303,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 114,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 0,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 115,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 1,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 116,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 2,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 117,
+            "id": 39,
             "components": [
                 {
                     "rotation": 0,
@@ -3508,91 +1331,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 118,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 4,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 119,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 5,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 120,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 6,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 121,
+            "id": 40,
             "components": [
                 {
                     "rotation": 0,
@@ -3620,180 +1359,12 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 122,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 8,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 123,
+            "id": 41,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
                         "x": 9,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 124,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 10,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 125,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 11,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 126,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 12,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 127,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 13,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "tile_0000.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
-            "id": 128,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 14,
                         "y": 8
                     },
                     "type": "Transform",
@@ -3821,7 +1392,7 @@
                     ]
                 }
             ],
-            "id": 129,
+            "id": 42,
             "components": [
                 {
                     "rotation": 0,
@@ -3842,7 +1413,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 130,
+            "id": 43,
             "components": [
                 {
                     "rotation": 0,
@@ -3870,7 +1441,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 131,
+            "id": 44,
             "components": [
                 {
                     "rotation": 0,
@@ -3898,7 +1469,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 132,
+            "id": 45,
             "components": [
                 {
                     "rotation": 0,
@@ -3939,7 +1510,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 133,
+            "id": 46,
             "components": [
                 {
                     "rotation": 0,
@@ -3967,7 +1538,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 134,
+            "id": 47,
             "components": [
                 {
                     "rotation": 0,
@@ -3995,7 +1566,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 135,
+            "id": 48,
             "components": [
                 {
                     "rotation": 0,
@@ -4023,7 +1594,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 136,
+            "id": 49,
             "components": [
                 {
                     "rotation": 0,
@@ -4051,7 +1622,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 137,
+            "id": 50,
             "components": [
                 {
                     "rotation": 0,
@@ -4092,7 +1663,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 138,
+            "id": 51,
             "components": [
                 {
                     "rotation": 0,
@@ -4133,7 +1704,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 139,
+            "id": 52,
             "components": [
                 {
                     "rotation": 0,
@@ -4174,7 +1745,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 140,
+            "id": 53,
             "components": [
                 {
                     "rotation": 0,
@@ -4215,7 +1786,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 141,
+            "id": 54,
             "components": [
                 {
                     "rotation": 0,
@@ -4256,7 +1827,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 142,
+            "id": 55,
             "components": [
                 {
                     "rotation": 0,
@@ -4297,7 +1868,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 143,
+            "id": 56,
             "components": [
                 {
                     "rotation": 0,
@@ -4343,7 +1914,7 @@
                     ]
                 }
             ],
-            "id": 144,
+            "id": 57,
             "components": [
                 {
                     "rotation": 0,
@@ -4371,12 +1942,12 @@
                 {
                     "tag": "Test",
                     "offset": {
-                        "x": 0.3,
-                        "y": 0.05
+                        "x": 0,
+                        "y": 0
                     },
                     "size": {
                         "x": 0.5,
-                        "y": 0.9
+                        "y": 1
                     },
                     "type": "Collider",
                     "isTrigger": false
@@ -4419,7 +1990,7 @@
                     ]
                 }
             ],
-            "id": 145,
+            "id": 58,
             "components": [
                 {
                     "rotation": 0,
@@ -4490,7 +2061,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 146,
+            "id": 59,
             "components": [
                 {
                     "rotation": 0,
@@ -4531,7 +2102,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 147,
+            "id": 60,
             "components": [
                 {
                     "rotation": 0,
@@ -4572,7 +2143,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 148,
+            "id": 61,
             "components": [
                 {
                     "rotation": 0,
@@ -4600,7 +2171,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 149,
+            "id": 62,
             "components": [
                 {
                     "rotation": 0,
@@ -4641,7 +2212,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 150,
+            "id": 63,
             "components": [
                 {
                     "rotation": 0,
@@ -4669,7 +2240,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 151,
+            "id": 64,
             "components": [
                 {
                     "rotation": 0,

@@ -24,7 +24,7 @@ mutable struct PlayerMovement
         this.isFacingRight = true
         this.isJump = false
         this.parent = C_NULL
-        this.jumpSound = SoundSourceModule.SoundSource(joinpath(pwd(),".."), "Jump.wav", 1, 50)
+        this.jumpSound = SoundSourceModule.SoundSource("Jump.wav", 1, 50)
 
         this.xDir = 0
         this.yDir = 0
