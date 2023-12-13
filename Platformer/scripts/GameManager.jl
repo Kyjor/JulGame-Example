@@ -22,7 +22,7 @@ function Base.getproperty(this::GameManager, s::Symbol)
             #ent = Entity("test", TransformModule.Transform(Vector2f(7,6)))
             #push!(MAIN.scene.entities, ent)
             #MAIN.scene.entities[57].addComponent(ShapeModule.Shape(Math.Vector2(1), Math.Vector3(50), false))
-            text = TextBoxModule.TextBox("test", joinpath(pwd(), ".."), joinpath("FiraCode", "ttf", "FiraCode-Regular.ttf"), 64, Math.Vector2(), Math.Vector2(), Math.Vector2(), "test", false)
+            text = TextBoxModule.TextBox("test", joinpath("FiraCode", "ttf", "FiraCode-Regular.ttf"), 64, Math.Vector2(), "test", true, true; isWorldEntity=true)
             push!(MAIN.scene.textBoxes, text)
             #text.setColor(100,100,100)
         end
