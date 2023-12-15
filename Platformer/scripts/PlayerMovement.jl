@@ -1,4 +1,5 @@
 using JulGame.AnimationModule
+using JulGame.AnimatorModule
 using JulGame.Macros
 using JulGame.Math
 using JulGame.MainLoop
@@ -60,7 +61,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             # Spaces full scancode is "SDL_SCANCODE_SPACE" so we use "SPACE". Every other key is the same.
             if ((input.getButtonPressed("SPACE")  || input.button == 1)|| this.isJump) && this.parent.getRigidbody().grounded && this.canMove 
                 this.animator.currentAnimation.animatedFPS = 0
-                this.animator.forceSpriteUpdate(2)
+                ForceSpriteUpdate(this.animator, 2)
                 this.jumpSound.toggleSound()
 
                 this.parent.getRigidbody().grounded = false
@@ -68,7 +69,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             end
             if (input.getButtonHeldDown("A") || input.xDir == -1) && this.canMove
                 if input.getButtonPressed("A")
-                    this.animator.forceSpriteUpdate(2)
+                    ForceSpriteUpdate(this.animator, 2)
                 end
                 x = -speed
                 if this.parent.getRigidbody().grounded
@@ -80,7 +81,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 end
             elseif (input.getButtonHeldDown("D")  || input.xDir == 1) && this.canMove
                 if input.getButtonPressed("D")
-                    this.animator.forceSpriteUpdate(2)
+                    ForceSpriteUpdate(this.animator, 2)
                 end
                 if this.parent.getRigidbody().grounded
                     this.animator.currentAnimation.animatedFPS = 5
@@ -92,7 +93,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 end
             elseif this.parent.getRigidbody().grounded
                 this.animator.currentAnimation.animatedFPS = 0
-                this.animator.forceSpriteUpdate(1)
+                ForceSpriteUpdate(this.animator, 1)
             end
             
             this.parent.getRigidbody().setVelocity(Vector2f(x, y))
