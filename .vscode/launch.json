@@ -7,8 +7,8 @@
         {
             "type": "julia",
             "request": "launch",
-            "name": "Run active Julia file",
-            "program": "${file}",
+            "name": "Run platformer",
+            "program": "${workspaceFolder}/Platformer/src/Platformer.jl",
             "stopOnEntry": false,
             "cwd": "${workspaceFolder}/Platformer/src",
             "juliaEnv": "${command:activeJuliaEnvironment}"
