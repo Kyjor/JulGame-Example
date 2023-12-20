@@ -1,5 +1,6 @@
 using JulGame.AnimationModule
 using JulGame.AnimatorModule
+using JulGame.RigidbodyModule
 using JulGame.Macros
 using JulGame.Math
 using JulGame.MainLoop
@@ -37,7 +38,6 @@ end
 function Base.getproperty(this::PlayerMovement, s::Symbol)
     if s == :initialize
         function()
-            #println("PlayerMovement initialize")
             event = @event begin
                 #this.jump()
             end
@@ -48,14 +48,11 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
         end
     elseif s == :update
         function(deltaTime)
-            #println(GetAnimationTest(this.animator.currentAnimation))
             this.canMove = true
             x = 0
             speed = 5
             input = MAIN.input
-            y = this.parent.getRigidbody().getVelocity().y
 
-            # println("x:$(this.xDir), y:$(this.yDir)")
             # Inputs match SDL2 scancodes after "SDL_SCANCODE_"
             # https://wiki.libsdl.org/SDL2/SDL_Scancode
             # Spaces full scancode is "SDL_SCANCODE_SPACE" so we use "SPACE". Every other key is the same.
@@ -63,9 +60,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 this.animator.currentAnimation.animatedFPS = 0
                 ForceSpriteUpdate(this.animator, 2)
                 this.jumpSound.toggleSound()
-
-                this.parent.getRigidbody().grounded = false
-                y = -5.0
+                AddVelocity(this.parent.getRigidbody(), Vector2f(0, -5))
             end
             if (input.getButtonHeldDown("A") || input.xDir == -1) && this.canMove
                 if input.getButtonPressed("A")
@@ -96,7 +91,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 ForceSpriteUpdate(this.animator, 1)
             end
             
-            this.parent.getRigidbody().setVelocity(Vector2f(x, y))
+            SetVelocity(this.parent.getRigidbody(), Vector2f(x, this.parent.getRigidbody().getVelocity().y))
             x = 0
             this.isJump = false
             if this.parent.getTransform().position.y > 8
