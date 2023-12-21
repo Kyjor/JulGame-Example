@@ -58,13 +58,13 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             # Spaces full scancode is "SDL_SCANCODE_SPACE" so we use "SPACE". Every other key is the same.
             if ((input.getButtonPressed("SPACE")  || input.button == 1)|| this.isJump) && this.parent.getRigidbody().grounded && this.canMove 
                 this.animator.currentAnimation.animatedFPS = 0
-                ForceSpriteUpdate(this.animator, 2)
+                ForceFrameUpdate(this.animator, 2)
                 this.jumpSound.toggleSound()
                 AddVelocity(this.parent.getRigidbody(), Vector2f(0, -5))
             end
             if (input.getButtonHeldDown("A") || input.xDir == -1) && this.canMove
                 if input.getButtonPressed("A")
-                    ForceSpriteUpdate(this.animator, 2)
+                    ForceFrameUpdate(this.animator, 2)
                 end
                 x = -speed
                 if this.parent.getRigidbody().grounded
@@ -76,7 +76,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 end
             elseif (input.getButtonHeldDown("D")  || input.xDir == 1) && this.canMove
                 if input.getButtonPressed("D")
-                    ForceSpriteUpdate(this.animator, 2)
+                    ForceFrameUpdate(this.animator, 2)
                 end
                 if this.parent.getRigidbody().grounded
                     this.animator.currentAnimation.animatedFPS = 5
@@ -88,7 +88,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 end
             elseif this.parent.getRigidbody().grounded
                 this.animator.currentAnimation.animatedFPS = 0
-                ForceSpriteUpdate(this.animator, 1)
+                ForceFrameUpdate(this.animator, 1)
             end
             
             SetVelocity(this.parent.getRigidbody(), Vector2f(x, this.parent.getRigidbody().getVelocity().y))
