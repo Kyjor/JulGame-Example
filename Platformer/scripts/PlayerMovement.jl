@@ -12,13 +12,14 @@ mutable struct PlayerMovement
     input
     isFacingRight
     isJump 
+    jumpVelocity
     jumpSound
     parent
 
     xDir
     yDir
 
-    function PlayerMovement()
+    function PlayerMovement(jumpVelocity = -5)
         this = new()
 
         this.canMove = false
@@ -27,6 +28,7 @@ mutable struct PlayerMovement
         this.isJump = false
         this.parent = C_NULL
         this.jumpSound = SoundSourceModule.SoundSource("Jump.wav", 1, 50)
+        this.jumpVelocity = jumpVelocity
 
         this.xDir = 0
         this.yDir = 0
@@ -60,7 +62,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 this.animator.currentAnimation.animatedFPS = 0
                 ForceFrameUpdate(this.animator, 2)
                 this.jumpSound.toggleSound()
-                AddVelocity(this.parent.getRigidbody(), Vector2f(0, -5))
+                AddVelocity(this.parent.getRigidbody(), Vector2f(0, this.jumpVelocity))
             end
             if (input.getButtonHeldDown("A") || input.xDir == -1) && this.canMove
                 if input.getButtonPressed("A")
@@ -101,18 +103,12 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
     elseif s == :setParent
         function(parent)
             this.parent = parent
-            collisionEvent = @event begin
-                this.handleCollisions()
-            end
+            collisionEvent = @argevent (col) this.handleCollisions(col)
             this.parent.getComponent(Collider).addCollisionEvent(collisionEvent)
         end
     elseif s == :handleCollisions
-        function()
-            return
-            collider = this.parent.getComponent(Collider)
-            for collision in collider.currentCollisions
-                if collision.tag == "ground"
-                end
+        function(otherCollider)
+            if otherCollider.tag == "ground"
             end
         end
     else

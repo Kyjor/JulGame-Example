@@ -30,18 +30,13 @@ function Base.getproperty(this::Enemy, s::Symbol)
     elseif s == :setParent
         function(parent)
             this.parent = parent
-            collisionEvent = @event begin
-                this.handleCollisions()
-            end
+            collisionEvent = @argevent (col) this.handleCollisions(col)
+
             this.parent.getComponent(Collider).addCollisionEvent(collisionEvent)
         end
     elseif s == :handleCollisions
-        function()
-            return
-            collider = this.parent.getComponent(Collider)
-            for collision in collider.currentCollisions
-                if collision.tag == "ground"
-                end
+        function(otherCollider)
+            if otherCollider.tag == "ground"
             end
         end
     else
