@@ -18,13 +18,13 @@ function Base.getproperty(this::GameManager, s::Symbol)
     if s == :initialize
         function()
             MAIN.cameraBackgroundColor = [252, 223, 205]
-            #push!(MAIN.scene.screenButtons, ScreenButtonModule.ScreenButton(joinpath(pwd(),".."), "ButtonUp.png", "ButtonDown.png", Vector2(256, 64), Vector2(), "test"))
-            #ent = Entity("test", TransformModule.Transform(Vector2f(7,6)))
-            #push!(MAIN.scene.entities, ent)
+            push!(MAIN.scene.screenButtons, ScreenButtonModule.ScreenButton(joinpath(pwd(),".."), "ButtonUp.png", "ButtonDown.png", Vector2(256, 64), Vector2(), "test"))
+            ent = Entity("test", TransformModule.Transform(Vector2f(7,6)))
+            push!(MAIN.scene.entities, ent)
             MAIN.scene.entities[57].addComponent(ShapeModule.Shape(Math.Vector2(1), Math.Vector3(50), false; isWorldEntity=true))
-            # text = TextBoxModule.TextBox("test", joinpath("FiraCode", "ttf", "FiraCode-Regular.ttf"), 64, Math.Vector2(), "test", true, true; isWorldEntity=true)
-            # push!(MAIN.scene.textBoxes, text)
-            #text.setColor(100,100,100)
+            text = TextBoxModule.TextBox("test", joinpath("FiraCode", "ttf", "FiraCode-Regular.ttf"), 64, Math.Vector2(), "test", true, true; isWorldEntity=true)
+            push!(MAIN.scene.textBoxes, text)
+            text.setColor(100,100,100)
         end
     elseif s == :update
         function(deltaTime)
