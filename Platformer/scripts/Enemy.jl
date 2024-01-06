@@ -18,10 +18,10 @@ end
 function Base.getproperty(this::Enemy, s::Symbol)
     if s == :initialize
         function()
-            this.animator = this.parent.getAnimator()
+            this.animator = this.parent.animator
             this.animator.currentAnimation = this.animator.animations[1]
             this.animator.currentAnimation.animatedFPS = 2
-            this.parent.getSprite().isFlipped = true
+            this.parent.sprite.isFlipped = true
         end
     elseif s == :update
         function(deltaTime)
@@ -32,7 +32,7 @@ function Base.getproperty(this::Enemy, s::Symbol)
             this.parent = parent
             collisionEvent = @argevent (col) this.handleCollisions(col)
 
-            this.parent.getComponent(Collider).addCollisionEvent(collisionEvent)
+            this.parent.collider.addCollisionEvent(collisionEvent)
         end
     elseif s == :handleCollisions
         function(otherCollider)
