@@ -18,7 +18,7 @@ function Base.getproperty(this::GameManager, s::Symbol)
     if s == :initialize
         function()
             MAIN.cameraBackgroundColor = [252, 223, 205]
-            push!(MAIN.scene.screenButtons, ScreenButtonModule.ScreenButton(joinpath(pwd(),".."), "ButtonUp.png", "ButtonDown.png", Vector2(256, 64), Vector2(), "test"))
+            push!(MAIN.scene.screenButtons, ScreenButtonModule.ScreenButton("ButtonUp.png", "ButtonDown.png", Vector2(256, 64), Vector2(), joinpath("FiraCode", "ttf", "FiraCode-Regular.ttf"), "test"))
             ent = Entity("test", TransformModule.Transform(Vector2f(7,6)))
             push!(MAIN.scene.entities, ent)
             MAIN.scene.entities[57].addShape(ShapeModule.Shape(Math.Vector3(0,0,0), Math.Vector2f(1,1), false, true, Math.Vector2f(0,0), Math.Vector2f(0,0)))
