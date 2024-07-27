@@ -42,6 +42,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             event = @event begin
                 #this.jump()
             end
+
             MAIN.scene.camera.target = this.parent.transform
             this.animator = this.parent.animator
             this.animator.currentAnimation = this.animator.animations[1]
@@ -58,13 +59,13 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             # Inputs match SDL2 scancodes after "SDL_SCANCODE_"
             # https://wiki.libsdl.org/SDL2/SDL_Scancode
             # Spaces full scancode is "SDL_SCANCODE_SPACE" so we use "SPACE". Every other key is the same.
-            if ((input.getButtonPressed("SPACE")  || input.button == 1)|| this.isJump) && this.parent.rigidbody.grounded && this.canMove 
+            if ((input.getButtonPressed("space")  || input.button == 1)|| this.isJump) && this.parent.rigidbody.grounded && this.canMove 
                 this.animator.currentAnimation.animatedFPS = 0
                 ForceFrameUpdate(this.animator, Int32(2))
                 this.jumpSound.toggleSound()
                 AddVelocity(this.parent.rigidbody, Vector2f(0, this.jumpVelocity))
             end
-            if (input.getButtonHeldDown("A") || input.xDir == -1) && this.canMove
+            if (input.getButtonHeldDown("a") || input.xDir == -1) && this.canMove
                 if input.getButtonPressed("A")
                     ForceFrameUpdate(this.animator, Int32(2))
                 end

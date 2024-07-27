@@ -3545,7 +3545,7 @@
                     "isTrigger": false
                 },
                 {
-                    "drag": 0.10000000149011612,
+                    "drag": 0.1,
                     "mass": 1,
                     "useGravity": true,
                     "type": "Rigidbody"
@@ -4101,5 +4101,48 @@
         }
     ],
     "UIElements": [
+        {
+            "fontSize": 167,
+            "name": "TextBox",
+            "id": 1,
+            "isWorldEntity": false,
+            "position": {
+                "x": 292,
+                "y": 376
+            },
+            "persistentBetweenScenes": false,
+            "isCenteredX": true,
+            "alpha": 255,
+            "size": {
+                "x": 216,
+                "y": 48
+            },
+            "isCenteredY": true,
+            "fontPath": "FiraCode//ttf//FiraCode-Medium.ttf",
+            "text": "Test text",
+            "type": "TextBox"
+        },
+        {
+            "buttonDownSpritePath": "ButtonDown.png",
+            "name": "nametest",
+            "id": 2,
+            "position": {
+                "x": 42,
+                "y": 38
+            },
+            "textOffset": {
+                "x": 0,
+                "y": 0
+            },
+            "persistentBetweenScenes": false,
+            "buttonUpSpritePath": "ButtonUp.png",
+            "size": {
+                "x": 307,
+                "y": 124
+            },
+            "fontPath": "FiraCode//ttf//FiraCode-Regular.ttf",
+            "text": "test",
+            "type": "ScreenButton"
+        }
     ]
 }
