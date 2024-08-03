@@ -32,7 +32,7 @@ function Base.getproperty(this::Enemy, s::Symbol)
             this.parent = parent
             collisionEvent = @argevent (col) this.handleCollisions(col)
 
-            this.parent.collider.addCollisionEvent(collisionEvent)
+            Component.add_collision_event(this.parent.collider, collisionEvent)
         end
     elseif s == :handleCollisions
         function(otherCollider)

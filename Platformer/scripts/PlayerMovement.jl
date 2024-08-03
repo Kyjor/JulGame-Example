@@ -1,5 +1,6 @@
 using JulGame.AnimationModule
 using JulGame.AnimatorModule
+using JulGame.InputModule
 using JulGame.RigidbodyModule
 using JulGame.Macros
 using JulGame.Math
@@ -47,7 +48,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             this.animator = this.parent.animator
             this.animator.currentAnimation = this.animator.animations[1]
             this.animator.currentAnimation.animatedFPS = 0
-            this.jumpSound = this.parent.addSoundSource(SoundSourceModule.SoundSource(Int32(1), false, "Jump.wav", Int32(50)))
+            this.jumpSound = JulGame.add_sound_source(this.parent, SoundSourceModule.SoundSource(Int32(1), false, "Jump.wav", Int32(50)))
         end
     elseif s == :update
         function(deltaTime)
@@ -59,14 +60,14 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             # Inputs match SDL2 scancodes after "SDL_SCANCODE_"
             # https://wiki.libsdl.org/SDL2/SDL_Scancode
             # Spaces full scancode is "SDL_SCANCODE_SPACE" so we use "SPACE". Every other key is the same.
-            if ((input.getButtonPressed("space")  || input.button == 1)|| this.isJump) && this.parent.rigidbody.grounded && this.canMove 
+            if ((InputModule.get_button_pressed(input, "space")   || input.button == 1)|| this.isJump) && this.parent.rigidbody.grounded && this.canMove 
                 this.animator.currentAnimation.animatedFPS = 0
                 ForceFrameUpdate(this.animator, Int32(2))
-                this.jumpSound.toggleSound()
+                Component.toggle_sound(this.jumpSound)
                 AddVelocity(this.parent.rigidbody, Vector2f(0, this.jumpVelocity))
             end
-            if (input.getButtonHeldDown("a") || input.xDir == -1) && this.canMove
-                if input.getButtonPressed("A")
+            if (InputModule.get_button_held_down(input, "a") || input.xDir == -1) && this.canMove
+                if InputModule.get_button_pressed(input, "a") 
                     ForceFrameUpdate(this.animator, Int32(2))
                 end
                 x = -speed
@@ -75,10 +76,10 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 end
                 if this.isFacingRight
                     this.isFacingRight = false
-                    this.parent.sprite.flip()
+                    Component.flip(this.parent.sprite)
                 end
-            elseif (input.getButtonHeldDown("D")  || input.xDir == 1) && this.canMove
-                if input.getButtonPressed("D")
+            elseif (InputModule.get_button_held_down(input, "d") || input.xDir == 1) && this.canMove
+                if InputModule.get_button_pressed(input, "d") 
                     ForceFrameUpdate(this.animator, Int32(2))
                 end
                 if this.parent.rigidbody.grounded
@@ -87,14 +88,14 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 x = speed
                 if !this.isFacingRight
                     this.isFacingRight = true
-                    this.parent.sprite.flip()
+                    Component.flip(this.parent.sprite)
                 end
             elseif this.parent.rigidbody.grounded
                 this.animator.currentAnimation.animatedFPS = 0
                 ForceFrameUpdate(this.animator, Int32(1))
             end
             
-            SetVelocity(this.parent.rigidbody, Vector2f(x, this.parent.rigidbody.getVelocity().y))
+            SetVelocity(this.parent.rigidbody, Vector2f(x, Component.get_velocity(this.parent.rigidbody).y))
             x = 0
             this.isJump = false
             if this.parent.transform.position.y > 8
@@ -105,7 +106,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
         function(parent)
             this.parent = parent
             collisionEvent = @argevent (col) this.handleCollisions(col)
-            this.parent.collider.addCollisionEvent(collisionEvent)
+            Component.add_collision_event(this.parent.collider, collisionEvent)
         end
     elseif s == :handleCollisions
         function(otherCollider)
