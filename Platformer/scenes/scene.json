@@ -5,7 +5,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 1,
+            "id": "1",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -61,7 +63,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 2,
+            "id": "2",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -117,7 +121,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 3,
+            "id": "3",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -173,7 +179,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 4,
+            "id": "4",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -229,7 +237,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 5,
+            "id": "5",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -285,7 +295,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 6,
+            "id": "6",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -341,7 +353,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 7,
+            "id": "7",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -397,7 +411,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 8,
+            "id": "8",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -453,7 +469,9 @@
             "name": "Gun1",
             "scripts": [
             ],
-            "id": 9,
+            "id": "9",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -524,7 +542,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 10,
+            "id": "10",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -580,7 +600,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 11,
+            "id": "11",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -651,7 +673,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 12,
+            "id": "12",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -722,7 +746,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 13,
+            "id": "13",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -793,7 +819,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 14,
+            "id": "14",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -849,7 +877,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 15,
+            "id": "15",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -905,7 +935,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 16,
+            "id": "16",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -961,7 +993,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 17,
+            "id": "17",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -1017,7 +1051,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 18,
+            "id": "18",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -1073,7 +1109,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 19,
+            "id": "19",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -1129,7 +1167,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 20,
+            "id": "20",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -1200,7 +1240,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 21,
+            "id": "21",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -1271,7 +1313,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 22,
+            "id": "22",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -1342,7 +1386,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 23,
+            "id": "23",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -1413,7 +1459,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 24,
+            "id": "24",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -1484,7 +1532,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 25,
+            "id": "25",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -1555,7 +1605,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 26,
+            "id": "26",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -1626,7 +1678,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 27,
+            "id": "27",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -1697,7 +1751,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 28,
+            "id": "28",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -1768,7 +1824,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 29,
+            "id": "29",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -1839,7 +1897,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 30,
+            "id": "30",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -1910,7 +1970,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 31,
+            "id": "31",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -1981,7 +2043,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 32,
+            "id": "32",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -2037,7 +2101,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 33,
+            "id": "33",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -2093,7 +2159,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 34,
+            "id": "34",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -2149,7 +2217,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 35,
+            "id": "35",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -2220,7 +2290,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 36,
+            "id": "36",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -2276,7 +2348,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 37,
+            "id": "37",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -2332,7 +2406,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 38,
+            "id": "38",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -2403,7 +2479,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 39,
+            "id": "39",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -2459,7 +2537,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 40,
+            "id": "40",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -2515,7 +2595,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 41,
+            "id": "41",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -2576,7 +2658,9 @@
                     ]
                 }
             ],
-            "id": 42,
+            "id": "42",
+            "parent": {
+            },
             "components": [
                 {
                     "position": {
@@ -2596,7 +2680,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 43,
+            "id": "43",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -2652,7 +2738,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 44,
+            "id": "44",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -2708,7 +2796,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 45,
+            "id": "45",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -2779,7 +2869,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 46,
+            "id": "46",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -2835,7 +2927,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 47,
+            "id": "47",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -2891,7 +2985,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 48,
+            "id": "48",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -2947,7 +3043,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 49,
+            "id": "49",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -3003,7 +3101,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 50,
+            "id": "50",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -3074,7 +3174,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 51,
+            "id": "51",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -3145,7 +3247,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 52,
+            "id": "52",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -3216,7 +3320,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 53,
+            "id": "53",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -3287,7 +3393,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 54,
+            "id": "54",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -3358,7 +3466,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 55,
+            "id": "55",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -3429,7 +3539,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 56,
+            "id": "56",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -3505,7 +3617,9 @@
                     ]
                 }
             ],
-            "id": 57,
+            "id": "57",
+            "parent": {
+            },
             "components": [
                 {
                     "animations": [
@@ -3609,7 +3723,9 @@
                     ]
                 }
             ],
-            "id": 58,
+            "id": "58",
+            "parent": {
+            },
             "components": [
                 {
                     "animations": [
@@ -3708,7 +3824,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 59,
+            "id": "59",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -3779,7 +3897,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 60,
+            "id": "60",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -3850,7 +3970,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 61,
+            "id": "61",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -3906,7 +4028,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 62,
+            "id": "62",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -3977,7 +4101,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 63,
+            "id": "63",
+            "parent": {
+            },
             "components": [
                 {
                     "rotation": 0,
@@ -4033,7 +4159,9 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": 64,
+            "id": "64",
+            "parent": {
+            },
             "components": [
                 {
                     "tag": "Test",
@@ -4098,6 +4226,79 @@
                     }
                 }
             ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": "22",
+            "parent": {
+            },
+            "components": [
+                {
+                    "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "enabled": true,
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 16,
+                        "y": 16
+                    },
+                    "imagePath": "tile_0004.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 1,
+                        "y": 3
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
         }
     ],
     "UIElements": [
@@ -4107,15 +4308,15 @@
             "id": 1,
             "isWorldEntity": false,
             "position": {
-                "x": 292,
-                "y": 376
+                "x": 0,
+                "y": 300
             },
             "persistentBetweenScenes": false,
             "isCenteredX": true,
             "alpha": 255,
             "size": {
-                "x": 216,
-                "y": 48
+                "x": 900,
+                "y": 201
             },
             "isCenteredY": true,
             "fontPath": "FiraCode//ttf//FiraCode-Medium.ttf",

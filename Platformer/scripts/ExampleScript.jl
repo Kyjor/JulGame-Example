@@ -1,5 +1,3 @@
-using JulGame.MainLoop # Accessed by MAIN
-
 mutable struct ExampleScript # The name of the script in the editor must match this
     parent # MUST INCLUDE THIS, Later accessed by this.parent
 

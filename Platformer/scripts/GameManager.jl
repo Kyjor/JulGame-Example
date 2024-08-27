@@ -1,11 +1,11 @@
 using JulGame.Component 
 using JulGame.EntityModule 
-using JulGame.MainLoop 
 using JulGame.Math
 using JulGame.UI
 
 mutable struct GameManager
     parent
+    test
 
     function GameManager()
         this = new()

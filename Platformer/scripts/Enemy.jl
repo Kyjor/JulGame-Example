@@ -1,5 +1,4 @@
 using JulGame.Macros
-using JulGame.MainLoop
 
 mutable struct Enemy
     animator

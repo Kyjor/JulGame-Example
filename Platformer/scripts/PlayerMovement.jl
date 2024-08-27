@@ -4,7 +4,6 @@ using JulGame.InputModule
 using JulGame.RigidbodyModule
 using JulGame.Macros
 using JulGame.Math
-using JulGame.MainLoop
 using JulGame.SoundSourceModule
 
 mutable struct PlayerMovement
