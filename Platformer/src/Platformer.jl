@@ -1,6 +1,5 @@
 module Platformer 
     using JulGame
-    using JulGame.Math
 
     function run()
         JulGame.MAIN = JulGame.Main(Float64(1.0))

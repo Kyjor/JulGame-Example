@@ -486,7 +486,7 @@
                     },
                     "type": "Collider",
                     "isPlatformerCollider": false,
-                    "isTrigger": false
+                    "isTrigger": true
                 },
                 {
                     "rotation": 0,
@@ -4240,8 +4240,8 @@
             "y": 0
         },
         "position": {
-            "x": 0,
-            "y": 0
+            "x": -1.4275986676172696,
+            "y": 1.59375
         },
         "size": {
             "x": 500,

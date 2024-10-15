@@ -1,5 +1,5 @@
 module EnemyModule
-    using JulGame
+    using ..JulGame
     
     mutable struct Enemy
         animator

@@ -1,19 +1,19 @@
 module PlayerMovementModule
-    using JulGame
-    using JulGame.AnimatorModule
-    using JulGame.Math
+    using ..JulGame
+    using ..JulGame.AnimatorModule
+    using ..JulGame.Math
 
     mutable struct PlayerMovement
         animator
-        canMove
+        canMove::Bool
         input
-        isFacingRight
-        isJump 
+        isFacingRight::Bool
+        isJump::Bool
         jumpSound
         parent
 
-        xDir
-        yDir
+        xDir::Int
+        yDir::Int
 
         function PlayerMovement()
             this = new()
