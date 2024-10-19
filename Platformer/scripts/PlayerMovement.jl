@@ -6,6 +6,7 @@ module PlayerMovementModule
     mutable struct PlayerMovement
         animator
         canMove::Bool
+        gun
         input
         isFacingRight::Bool
         isJump::Bool
@@ -19,6 +20,7 @@ module PlayerMovementModule
             this = new()
 
             this.canMove = false
+            this.gun = nothing
             this.input = C_NULL
             this.isFacingRight = true
             this.isJump = false
@@ -40,6 +42,7 @@ module PlayerMovementModule
 
         MAIN.scene.camera.target = this.parent.transform
         this.animator = this.parent.animator
+        this.animator.currentAnimation.animatedFPS = 0
     end
 
     # This is called every frame
@@ -70,6 +73,9 @@ module PlayerMovementModule
             if this.isFacingRight
                 this.isFacingRight = false
                 JulGame.Component.flip(this.parent.sprite)
+                if this.gun !== nothing 
+                        JulGame.Component.flip(this.gun.sprite)
+                end
             end
         elseif (JulGame.InputModule.get_button_held_down(MAIN.input,  "D")  || input.xDir == 1) && this.canMove
             if JulGame.InputModule.get_button_pressed(MAIN.input,  "D")
@@ -82,7 +88,14 @@ module PlayerMovementModule
             if !this.isFacingRight
                 this.isFacingRight = true
                 JulGame.Component.flip(this.parent.sprite)
+                if this.gun !== nothing 
+                        JulGame.Component.flip(this.gun.sprite)
+                end
             end
+        elseif JulGame.InputModule.get_button_held_down(MAIN.input,  "W")
+            this.parent.transform.position = Vector2f(this.parent.transform.position.x, this.parent.transform.position.y - speed * deltaTime)
+        elseif JulGame.InputModule.get_button_held_down(MAIN.input,  "S")
+            this.parent.transform.position = Vector2f(this.parent.transform.position.x, this.parent.transform.position.y + speed * deltaTime)
         elseif this.parent.rigidbody.grounded
             this.animator.currentAnimation.animatedFPS = 0
             AnimatorModule.force_frame_update(this.animator, 1)
@@ -94,6 +107,10 @@ module PlayerMovementModule
         if this.parent.transform.position.y > 8
             this.parent.transform.position = Vector2f(1, 4)
         end
+        if this.gun !== nothing 
+            offset = this.isFacingRight ? 0.25 : -0.25
+            this.gun.transform.position = Vector2f(this.parent.transform.position.x + offset, this.parent.transform.position.y + 0.25)
+        end
     end
 
     # This is called when the script is removed from an entity (scene change, entity deletion)
@@ -103,8 +120,14 @@ module PlayerMovementModule
 
     function handle_collisions(this::PlayerMovement, event)
         col = event.collider
-        if col.tag == "ground"
-            println("Ground collision")
+        if col.tag == "gun" && this.gun === nothing
+            this.gun = col.parent
+            this.gun.scripts[1].isBobbing = false
+            this.gun.sprite.offset = Vector2f(0,0)
+            if this.isFacingRight
+                this.gun.sprite.isFlipped = false 
+            end
+            println("parenting gun")
         end
     end
 end # module

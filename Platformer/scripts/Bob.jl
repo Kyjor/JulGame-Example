@@ -1,11 +1,12 @@
 module BobModule
-    using JulGame
+    using ..JulGame
     mutable struct Bob
-    parent # do not remove this line, this is a reference to the entity that this script is attached to
-    # This is where you define your script's fields
-    # Example: speed::Float64
-    elapsedTime
-    startingY
+        parent # do not remove this line, this is a reference to the entity that this script is attached to
+        # This is where you define your script's fields
+        # Example: speed::Float64
+        elapsedTime
+        startingY
+        isBobbing::Bool
 
         function Bob()
             this = new() # do not remove this line
@@ -13,6 +14,7 @@ module BobModule
             # this is where you initialize your script's fields
             # Example: this.speed = 1.0
             this.elapsedTime = 0.0
+            this.isBobbing = true
 
             return this # do not remove this line
         end
@@ -28,6 +30,10 @@ module BobModule
     # This is called every frame
     # Do not remove this function
     function JulGame.update(this::Bob, deltaTime)
+        if !this.isBobbing 
+            return
+        end
+        
         bob(this)
         this.elapsedTime += deltaTime
     end

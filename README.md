@@ -1,1 +1,1 @@
-# guppy
+# JulGame Example Platformer
