@@ -471,6 +471,7 @@
                 {
                     "name": "Bob",
                     "fields": {
+                        "isBobbing": true,
                         "startingY": null,
                         "elapsedTime": 0
                     }
@@ -2868,7 +2869,7 @@
         },
         {
             "isActive": true,
-            "name": "tile2",
+            "name": "Bullet",
             "scripts": [
             ],
             "id": "46",
@@ -2878,10 +2879,10 @@
                 {
                     "rotation": 0,
                     "crop": {
-                        "t": 0,
-                        "x": 0,
-                        "z": 0,
-                        "y": 0
+                        "t": 17,
+                        "x": 68,
+                        "z": 17,
+                        "y": 68
                     },
                     "isFlipped": false,
                     "layer": 0,
@@ -2900,10 +2901,10 @@
                         "y": 0.5
                     },
                     "size": {
-                        "x": 16,
-                        "y": 16
+                        "x": 169,
+                        "y": 101
                     },
-                    "imagePath": "tile_0000.png",
+                    "imagePath": "tilemap.png",
                     "color": {
                         "x": 255,
                         "z": 255,
@@ -2913,8 +2914,8 @@
                 },
                 {
                     "position": {
-                        "x": 14,
-                        "y": 0
+                        "x": 1.9375,
+                        "y": 5.09375
                     },
                     "type": "Transform",
                     "scale": {
@@ -3636,7 +3637,7 @@
                 {
                     "animations": [
                         {
-                            "animatedFPS": 60,
+                            "animatedFPS": 2,
                             "frames": [
                                 {
                                     "x": 0,
@@ -5088,8 +5089,8 @@
             "y": 0
         },
         "position": {
-            "x": -2.40625,
-            "y": 1.59375
+            "x": 17.438339999999947,
+            "y": 0.594288281480547
         },
         "size": {
             "x": 500,
