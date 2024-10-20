@@ -3,3 +3,5 @@ Platformer/Manifest.toml
 .vscode/settings.json
 
 Build/
+
+.DS_Store

@@ -121,12 +121,8 @@ module PlayerMovementModule
     function handle_collisions(this::PlayerMovement, event)
         col = event.collider
         if col.tag == "gun" && this.gun === nothing
-            this.gun = col.parent
-            this.gun.scripts[1].isBobbing = false
-            this.gun.sprite.offset = Vector2f(0,0)
-            if this.isFacingRight
-                this.gun.sprite.isFlipped = false 
-            end
+            JulGame.destroy_entity(MAIN, col.parent)
+            this.animator.currentAnimation = this.animator.animations[2]
             println("parenting gun")
         end
     end
