@@ -5,3 +5,5 @@ Platformer/Manifest.toml
 Build/
 
 .DS_Store
+
+*.swp

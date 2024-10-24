@@ -5,7 +5,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "1",
+            "id": "a13a3321-4858-4025-8b95-faa3d9319e07",
             "parent": {
             },
             "components": [
@@ -59,11 +59,224 @@
             ]
         },
         {
+            "isActive": false,
+            "name": "Bullet",
+            "scripts": [
+            ],
+            "id": "e77df85a-30e2-4c11-af06-699e0866e439",
+            "parent": {
+            },
+            "components": [
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "enabled": true,
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 17,
+                        "x": 68,
+                        "z": 17,
+                        "y": 68
+                    },
+                    "isFlipped": false,
+                    "layer": 2,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "size": {
+                        "x": 169,
+                        "y": 101
+                    },
+                    "imagePath": "tilemap.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 2,
+                        "y": 4
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Player",
+            "scripts": [
+                {
+                    "name": "PlayerMovement",
+                    "fields": {
+                        "isFacingRight": true,
+                        "jumpSound": null,
+                        "xDir": 0,
+                        "isJump": false,
+                        "gun": false,
+                        "yDir": 0,
+                        "animator": null,
+                        "bullet": null,
+                        "canMove": false,
+                        "input": {
+                        }
+                    }
+                }
+            ],
+            "id": "32aaabb8-d4c6-4418-9c91-e3dd818fba66",
+            "parent": {
+            },
+            "components": [
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 2,
+                            "frames": [
+                                {
+                                    "x": 85,
+                                    "y": 68,
+                                    "z": 17,
+                                    "t": 17
+                                },
+                                {
+                                    "x": 102,
+                                    "y": 68,
+                                    "z": 17,
+                                    "t": 17
+                                }
+                            ]
+                        },
+                        {
+                            "animatedFPS": 3,
+                            "frames": [
+                                {
+                                    "x": 0,
+                                    "y": 68,
+                                    "z": 17,
+                                    "t": 17
+                                },
+                                {
+                                    "x": 17,
+                                    "y": 68,
+                                    "z": 17,
+                                    "t": 17
+                                },
+                                {
+                                    "x": 34,
+                                    "y": 68,
+                                    "z": 17,
+                                    "t": 17
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                },
+                {
+                    "tag": "Player",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "enabled": true,
+                    "size": {
+                        "x": 0.5,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "drag": 0.1,
+                    "mass": 1,
+                    "useGravity": true,
+                    "type": "Rigidbody"
+                },
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 17,
+                        "x": 85,
+                        "z": 17,
+                        "y": 68
+                    },
+                    "isFlipped": false,
+                    "layer": 2,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "size": {
+                        "x": 169,
+                        "y": 101
+                    },
+                    "imagePath": "tilemap.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 1,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
             "isActive": true,
             "name": "tile2",
             "scripts": [
             ],
-            "id": "2",
+            "id": "b83edbb9-ba7a-4a4a-a63e-8ba4004f9622",
             "parent": {
             },
             "components": [
@@ -121,7 +334,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "3",
+            "id": "934bd5b4-cbc5-4d54-a686-608117c3ff7c",
             "parent": {
             },
             "components": [
@@ -179,7 +392,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "4",
+            "id": "59d5a79e-c0ce-4763-851a-dbcc1c8afb3c",
             "parent": {
             },
             "components": [
@@ -237,7 +450,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "5",
+            "id": "b502891e-8fad-412f-be68-5caa2c35b264",
             "parent": {
             },
             "components": [
@@ -295,7 +508,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "6",
+            "id": "9ac52718-82ee-4dc4-b504-8fb853d3ebcf",
             "parent": {
             },
             "components": [
@@ -353,7 +566,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "7",
+            "id": "c8b62f6f-6359-4b8c-8fb5-f21abb77e54e",
             "parent": {
             },
             "components": [
@@ -411,7 +624,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "8",
+            "id": "85dc5880-5468-4b9b-a4d6-62653f8f3dc1",
             "parent": {
             },
             "components": [
@@ -477,7 +690,7 @@
                     }
                 }
             ],
-            "id": "9",
+            "id": "c5a1db40-f05f-4d75-b653-6c3e1e7b25e5",
             "parent": {
             },
             "components": [
@@ -550,7 +763,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "10",
+            "id": "7cacd395-bab7-42fc-a262-2cd529858b7a",
             "parent": {
             },
             "components": [
@@ -608,7 +821,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "11",
+            "id": "743b8b5d-c163-4b37-a454-4b6733d1c775",
             "parent": {
             },
             "components": [
@@ -681,7 +894,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "12",
+            "id": "e77ef936-8b2e-4d08-aed7-f2b7b85c724a",
             "parent": {
             },
             "components": [
@@ -754,7 +967,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "13",
+            "id": "81cb993e-0ccb-4c44-89f3-9d8e72647e7c",
             "parent": {
             },
             "components": [
@@ -827,7 +1040,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "14",
+            "id": "0438993c-5f60-4ab1-9f01-8048ce408b38",
             "parent": {
             },
             "components": [
@@ -885,7 +1098,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "15",
+            "id": "41fccfe9-8bcc-4ea4-a55d-742c4a5b89a7",
             "parent": {
             },
             "components": [
@@ -943,7 +1156,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "16",
+            "id": "0820b505-f112-4ff6-b4be-97dd6386003e",
             "parent": {
             },
             "components": [
@@ -1001,7 +1214,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "17",
+            "id": "79c5c6f0-84cd-49d6-86e0-e0be26a55063",
             "parent": {
             },
             "components": [
@@ -1059,7 +1272,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "18",
+            "id": "2f9cf23b-9ea7-432e-be14-9e37c4b84ba9",
             "parent": {
             },
             "components": [
@@ -1117,7 +1330,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "19",
+            "id": "52b2d182-9d9a-4dd5-8385-1577e911dbbe",
             "parent": {
             },
             "components": [
@@ -1175,7 +1388,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "20",
+            "id": "2771ea10-1d42-4186-985a-5f37732e3c99",
             "parent": {
             },
             "components": [
@@ -1248,7 +1461,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "21",
+            "id": "a96c8be0-6e29-457f-95a0-f34f92f499f6",
             "parent": {
             },
             "components": [
@@ -1321,7 +1534,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "22",
+            "id": "f429b366-ce45-4cd2-8642-575a41382b34",
             "parent": {
             },
             "components": [
@@ -1394,7 +1607,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "23",
+            "id": "104ce2a1-327a-4e6e-8c36-1de4c49b1c2b",
             "parent": {
             },
             "components": [
@@ -1467,7 +1680,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "24",
+            "id": "c03dba7a-e8ed-4fd7-97a5-81e3437227c0",
             "parent": {
             },
             "components": [
@@ -1540,7 +1753,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "25",
+            "id": "711dd7ce-4f69-49dc-850b-637e8395774c",
             "parent": {
             },
             "components": [
@@ -1613,7 +1826,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "26",
+            "id": "ab3aa5a6-b258-4982-b042-53bb98c5110a",
             "parent": {
             },
             "components": [
@@ -1686,7 +1899,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "27",
+            "id": "9cc33327-c839-4c68-ab27-a5ba8532d306",
             "parent": {
             },
             "components": [
@@ -1759,7 +1972,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "28",
+            "id": "1332eb75-a2a2-4ab3-9de5-e5e3422192cf",
             "parent": {
             },
             "components": [
@@ -1832,7 +2045,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "29",
+            "id": "55bf7ab5-2931-4ad1-b034-b6c214ebce6e",
             "parent": {
             },
             "components": [
@@ -1905,7 +2118,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "30",
+            "id": "a35ae07e-eb84-48f6-ad18-e90441d3eb0a",
             "parent": {
             },
             "components": [
@@ -1978,7 +2191,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "31",
+            "id": "c408f5c8-f2e0-4632-b25a-6c202610c9f3",
             "parent": {
             },
             "components": [
@@ -2051,7 +2264,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "32",
+            "id": "25cbbf99-2c22-4a8d-b3f0-28fd1c714ce1",
             "parent": {
             },
             "components": [
@@ -2109,7 +2322,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "33",
+            "id": "dd70f60a-c73d-4094-a9d2-077a72569295",
             "parent": {
             },
             "components": [
@@ -2167,7 +2380,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "34",
+            "id": "3eefaaf2-f430-40dc-a3ff-a1104547125e",
             "parent": {
             },
             "components": [
@@ -2225,7 +2438,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "35",
+            "id": "761ae324-a80e-4ff5-a85d-998affcb7d22",
             "parent": {
             },
             "components": [
@@ -2298,7 +2511,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "36",
+            "id": "5c7e3d08-91cc-42d0-a340-680c5567f9ee",
             "parent": {
             },
             "components": [
@@ -2356,7 +2569,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "37",
+            "id": "7e2a1ea2-965c-45c6-bed8-72be1a3e38bd",
             "parent": {
             },
             "components": [
@@ -2414,7 +2627,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "38",
+            "id": "6e183639-ff0c-422c-9758-9ab5191e2664",
             "parent": {
             },
             "components": [
@@ -2487,7 +2700,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "39",
+            "id": "7a4140e2-6a76-4a90-8f38-f48f5209935a",
             "parent": {
             },
             "components": [
@@ -2545,7 +2758,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "40",
+            "id": "cc4dc696-d83e-4116-b6a4-a74ee5538314",
             "parent": {
             },
             "components": [
@@ -2603,7 +2816,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "41",
+            "id": "96232e05-59c0-46c0-a8de-270a743adf41",
             "parent": {
             },
             "components": [
@@ -2658,32 +2871,10 @@
         },
         {
             "isActive": true,
-            "name": "GameManager",
-            "scripts": [
-            ],
-            "id": "42",
-            "parent": {
-            },
-            "components": [
-                {
-                    "position": {
-                        "x": 4,
-                        "y": -1
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                }
-            ]
-        },
-        {
-            "isActive": true,
             "name": "tile2",
             "scripts": [
             ],
-            "id": "43",
+            "id": "baf0355d-0746-4a2d-b02c-664e2c4c5d08",
             "parent": {
             },
             "components": [
@@ -2741,7 +2932,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "44",
+            "id": "7eb8a775-62a0-4068-a670-4eba52c7db79",
             "parent": {
             },
             "components": [
@@ -2799,7 +2990,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "45",
+            "id": "b0967f89-98ce-464a-b016-7f9683edf79d",
             "parent": {
             },
             "components": [
@@ -2869,68 +3060,10 @@
         },
         {
             "isActive": true,
-            "name": "Bullet",
-            "scripts": [
-            ],
-            "id": "46",
-            "parent": {
-            },
-            "components": [
-                {
-                    "rotation": 0,
-                    "crop": {
-                        "t": 17,
-                        "x": 68,
-                        "z": 17,
-                        "y": 68
-                    },
-                    "isFlipped": false,
-                    "layer": 0,
-                    "isWorldEntity": true,
-                    "position": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "pixelsPerUnit": -1,
-                    "offset": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "center": {
-                        "x": 0.5,
-                        "y": 0.5
-                    },
-                    "size": {
-                        "x": 169,
-                        "y": 101
-                    },
-                    "imagePath": "tilemap.png",
-                    "color": {
-                        "x": 255,
-                        "z": 255,
-                        "y": 255
-                    },
-                    "type": "Sprite"
-                },
-                {
-                    "position": {
-                        "x": 1.9375,
-                        "y": 5.09375
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                }
-            ]
-        },
-        {
-            "isActive": true,
             "name": "tile2",
             "scripts": [
             ],
-            "id": "47",
+            "id": "9d5006e7-4852-4dc0-943b-f1425bdc1687",
             "parent": {
             },
             "components": [
@@ -2988,7 +3121,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "48",
+            "id": "8fbe4e44-070e-4d97-9d1f-dbf312ec2778",
             "parent": {
             },
             "components": [
@@ -3046,7 +3179,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "49",
+            "id": "70d91f3b-5552-4d56-bec7-5d161b21e696",
             "parent": {
             },
             "components": [
@@ -3104,7 +3237,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "50",
+            "id": "f63ab9d6-2067-4b15-8277-5f551471e0e4",
             "parent": {
             },
             "components": [
@@ -3177,7 +3310,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "51",
+            "id": "da537cb8-0d66-4ca9-8ecd-29e0db586775",
             "parent": {
             },
             "components": [
@@ -3250,7 +3383,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "52",
+            "id": "85de055d-22d7-46f6-b588-1508cba58de8",
             "parent": {
             },
             "components": [
@@ -3323,7 +3456,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "53",
+            "id": "bd5cd306-7ef7-461e-a9c3-cf896af19d13",
             "parent": {
             },
             "components": [
@@ -3396,7 +3529,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "54",
+            "id": "1e052237-9bbb-4080-b502-ccc74c0ea026",
             "parent": {
             },
             "components": [
@@ -3469,7 +3602,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "55",
+            "id": "1f1e8020-23e9-4ca7-85c0-c4c2f2e67a38",
             "parent": {
             },
             "components": [
@@ -3542,7 +3675,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "56",
+            "id": "20bade13-2ac3-40b8-b27a-eb35438d0d9c",
             "parent": {
             },
             "components": [
@@ -3612,145 +3745,6 @@
         },
         {
             "isActive": true,
-            "name": "Player",
-            "scripts": [
-                {
-                    "name": "PlayerMovement",
-                    "fields": {
-                        "isFacingRight": true,
-                        "jumpSound": null,
-                        "xDir": 0,
-                        "isJump": false,
-                        "gun": null,
-                        "yDir": 0,
-                        "animator": null,
-                        "canMove": false,
-                        "input": {
-                        }
-                    }
-                }
-            ],
-            "id": "57",
-            "parent": {
-            },
-            "components": [
-                {
-                    "animations": [
-                        {
-                            "animatedFPS": 2,
-                            "frames": [
-                                {
-                                    "x": 85,
-                                    "y": 68,
-                                    "z": 17,
-                                    "t": 17
-                                },
-                                {
-                                    "x": 102,
-                                    "y": 68,
-                                    "z": 17,
-                                    "t": 17
-                                }
-                            ]
-                        },
-                        {
-                            "animatedFPS": 3,
-                            "frames": [
-                                {
-                                    "x": 0,
-                                    "y": 68,
-                                    "z": 17,
-                                    "t": 17
-                                },
-                                {
-                                    "x": 17,
-                                    "y": 68,
-                                    "z": 17,
-                                    "t": 17
-                                },
-                                {
-                                    "x": 34,
-                                    "y": 68,
-                                    "z": 17,
-                                    "t": 17
-                                }
-                            ]
-                        }
-                    ],
-                    "type": "Animator"
-                },
-                {
-                    "tag": "Test",
-                    "offset": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "enabled": true,
-                    "size": {
-                        "x": 0.5,
-                        "y": 1
-                    },
-                    "type": "Collider",
-                    "isPlatformerCollider": false,
-                    "isTrigger": false
-                },
-                {
-                    "drag": 0.1,
-                    "mass": 1,
-                    "useGravity": true,
-                    "type": "Rigidbody"
-                },
-                {
-                    "rotation": 0,
-                    "crop": {
-                        "t": 17,
-                        "x": 85,
-                        "z": 17,
-                        "y": 68
-                    },
-                    "isFlipped": false,
-                    "layer": 0,
-                    "isWorldEntity": true,
-                    "position": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "pixelsPerUnit": -1,
-                    "offset": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "center": {
-                        "x": 0.5,
-                        "y": 0.5
-                    },
-                    "size": {
-                        "x": 169,
-                        "y": 101
-                    },
-                    "imagePath": "tilemap.png",
-                    "color": {
-                        "x": 255,
-                        "z": 255,
-                        "y": 255
-                    },
-                    "type": "Sprite"
-                },
-                {
-                    "position": {
-                        "x": 1,
-                        "y": 5
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                }
-            ]
-        },
-        {
-            "isActive": true,
             "name": "Bee",
             "scripts": [
                 {
@@ -3761,7 +3755,7 @@
                     }
                 }
             ],
-            "id": "58",
+            "id": "3b2513c5-add2-4418-80f5-36d6ea2d4336",
             "parent": {
             },
             "components": [
@@ -3856,7 +3850,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "59",
+            "id": "7e9a55b8-f6c8-4865-adac-2aedd825bfb1",
             "parent": {
             },
             "components": [
@@ -3929,7 +3923,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "60",
+            "id": "6ad2ec95-ea09-45d8-92ec-ef66b1ddd865",
             "parent": {
             },
             "components": [
@@ -4002,7 +3996,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "61",
+            "id": "36d3fefa-e291-4230-a96f-bb752219e8e7",
             "parent": {
             },
             "components": [
@@ -4060,7 +4054,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "62",
+            "id": "ef788ea2-f5b7-4c96-8f10-209d6b9bd88a",
             "parent": {
             },
             "components": [
@@ -4133,7 +4127,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "63",
+            "id": "446f1535-2f92-4691-8146-02ca03d88c3a",
             "parent": {
             },
             "components": [
@@ -4191,7 +4185,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "64",
+            "id": "bc4524de-d27d-44cd-93a3-0538d8d6a4ef",
             "parent": {
             },
             "components": [
@@ -4264,7 +4258,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "3888944e-d4a2-4e15-9285-466b00e2694a",
+            "id": "72a0e067-f38f-446c-84b5-a0367f79f26c",
             "parent": {
             },
             "components": [
@@ -4337,7 +4331,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "f3917549-06a6-46f6-863b-fe33add634d4",
+            "id": "ebecc003-087c-4e9c-ac71-9d16f6d7e240",
             "parent": {
             },
             "components": [
@@ -4410,7 +4404,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "74519c46-3cf9-4f4f-b406-98472a8286d4",
+            "id": "8eba1263-05cc-4d96-9930-46a36dbe40f8",
             "parent": {
             },
             "components": [
@@ -4483,7 +4477,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "8e7b44aa-f3d8-4c63-8a0a-db00dfca2956",
+            "id": "bb259a15-e0c8-40a5-9210-d268f04a30b8",
             "parent": {
             },
             "components": [
@@ -4556,7 +4550,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "c9429116-a7a6-42ac-8fe7-2db0d5eaea14",
+            "id": "d276570e-b9e5-4c9f-9abe-3709d6ebb956",
             "parent": {
             },
             "components": [
@@ -4629,7 +4623,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "74ec5cff-4d79-4d44-9362-8840e61253c2",
+            "id": "45219e7e-7101-482d-8ec1-507e02a21a05",
             "parent": {
             },
             "components": [
@@ -4702,7 +4696,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "74207fd9-1047-45be-b1a9-dad4fa131c30",
+            "id": "c63ea539-5a6e-46e0-bd4f-a4b366a3ac31",
             "parent": {
             },
             "components": [
@@ -4760,7 +4754,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "5c652a50-7da2-4ac2-80cf-65a4f97f9713",
+            "id": "41401715-c030-4ab0-9e2a-9cefa0e10449",
             "parent": {
             },
             "components": [
@@ -4833,7 +4827,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "82cbec38-d202-4db5-9b4a-ccf7141d993c",
+            "id": "d9e353d5-35f4-43d3-b165-7d2ca3f48fb6",
             "parent": {
             },
             "components": [
@@ -4906,7 +4900,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "53c4e8ec-c7ae-4303-aa55-f85953cef223",
+            "id": "dfadea14-b6d6-42ec-85fb-c3a3aebf95a6",
             "parent": {
             },
             "components": [
@@ -4964,7 +4958,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "8b6aecec-5650-4cb9-a70c-ffaea59d9a3d",
+            "id": "7c7f952a-3d6a-44f7-bf9d-c98941259002",
             "parent": {
             },
             "components": [
@@ -5037,7 +5031,7 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "cdfe185e-7cbd-4f2d-9289-5473ecbe23f1",
+            "id": "29f1f897-ab94-4f53-9374-280e77ceb927",
             "parent": {
             },
             "components": [
@@ -5112,8 +5106,8 @@
             "y": 0
         },
         "position": {
-            "x": 17.438339999999947,
-            "y": 0.594288281480547
+            "x": 1.687828749999995,
+            "y": 1.5910745288829933
         },
         "size": {
             "x": 500,

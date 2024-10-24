@@ -33,7 +33,8 @@ module BobModule
         if !this.isBobbing 
             return
         end
-        
+        return
+
         bob(this)
         this.elapsedTime += deltaTime
     end

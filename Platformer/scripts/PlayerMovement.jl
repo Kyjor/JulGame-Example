@@ -5,8 +5,10 @@ module PlayerMovementModule
 
     mutable struct PlayerMovement
         animator
+        bullet
+        bulletTime::Float64
         canMove::Bool
-        gun
+        gun::Bool
         input
         isFacingRight::Bool
         isJump::Bool
@@ -20,11 +22,12 @@ module PlayerMovementModule
             this = new()
 
             this.canMove = false
-            this.gun = nothing
+            this.gun = false
             this.input = C_NULL
             this.isFacingRight = true
             this.isJump = false
             this.parent = C_NULL
+            this.bulletTime = 0.0
 
             this.xDir = 0
             this.yDir = 0
@@ -43,6 +46,9 @@ module PlayerMovementModule
         MAIN.scene.camera.target = this.parent.transform
         this.animator = this.parent.animator
         this.animator.currentAnimation.animatedFPS = 0
+        this.bullet = JulGame.SceneModule.get_entity_by_id(MAIN.scene, "e77df85a-30e2-4c11-af06-699e0866e439")
+        bulletCollisionEvent = JulGame.Macros.@argevent (col) handle_bullet_collisions(this, col)
+        JulGame.Component.add_collision_event(this.bullet.collider, bulletCollisionEvent)
     end
 
     # This is called every frame
@@ -73,9 +79,6 @@ module PlayerMovementModule
             if this.isFacingRight
                 this.isFacingRight = false
                 JulGame.Component.flip(this.parent.sprite)
-                if this.gun !== nothing 
-                        JulGame.Component.flip(this.gun.sprite)
-                end
             end
         elseif (JulGame.InputModule.get_button_held_down(MAIN.input,  "D")  || input.xDir == 1) && this.canMove
             if JulGame.InputModule.get_button_pressed(MAIN.input,  "D")
@@ -88,9 +91,6 @@ module PlayerMovementModule
             if !this.isFacingRight
                 this.isFacingRight = true
                 JulGame.Component.flip(this.parent.sprite)
-                if this.gun !== nothing 
-                        JulGame.Component.flip(this.gun.sprite)
-                end
             end
         elseif JulGame.InputModule.get_button_held_down(MAIN.input,  "W")
             this.parent.transform.position = Vector2f(this.parent.transform.position.x, this.parent.transform.position.y - speed * deltaTime)
@@ -100,6 +100,17 @@ module PlayerMovementModule
             this.animator.currentAnimation.animatedFPS = 0
             AnimatorModule.force_frame_update(this.animator, 1)
         end
+
+        if this.gun && JulGame.InputModule.get_button_held_down(MAIN.input, "F") && !this.bullet.isActive
+            this.bulletTime = 0.0
+            this.bullet.transform.position = this.parent.transform.position
+            this.bullet.isActive = true  
+            if this.isFacingRight
+                this.bullet.sprite.isFlipped = false
+            else
+                this.bullet.sprite.isFlipped = true 
+            end
+        end
         
         RigidbodyModule.set_velocity(this.parent.rigidbody, Vector2f(x, this.parent.rigidbody.velocity.y))
         x = 0
@@ -107,9 +118,14 @@ module PlayerMovementModule
         if this.parent.transform.position.y > 8
             this.parent.transform.position = Vector2f(1, 4)
         end
-        if this.gun !== nothing 
-            offset = this.isFacingRight ? 0.25 : -0.25
-            this.gun.transform.position = Vector2f(this.parent.transform.position.x + offset, this.parent.transform.position.y + 0.25)
+
+        if this.bullet.isActive
+            this.bulletTime += deltaTime
+            bullet_update(this, deltaTime)
+            if this.bulletTime >= 3.0
+                this.bulletTime = 0.0
+                this.bullet.isActive = false
+            end
         end
     end
 
@@ -120,10 +136,25 @@ module PlayerMovementModule
 
     function handle_collisions(this::PlayerMovement, event)
         col = event.collider
-        if col.tag == "gun" && this.gun === nothing
+        if col.tag == "gun" && this.gun === false 
             JulGame.destroy_entity(MAIN, col.parent)
             this.animator.currentAnimation = this.animator.animations[2]
-            println("parenting gun")
+            this.gun = true
         end
+    end
+
+    function handle_bullet_collisions(this::PlayerMovement, event)
+        col = event.collider
+        if col.tag == "Player"
+            println("Hit player")
+        else 
+            this.bullet.isActive = false
+            this.bulletTime = 0.0
+        end
+    end
+
+    function bullet_update(this::PlayerMovement, deltaTime)
+       speed = this.bullet.sprite.isFlipped ? -5 : 5
+       this.bullet.transform.position = Vector2f(this.bullet.transform.position.x + speed * deltaTime, this.bullet.transform.position.y) 
     end
 end # module
