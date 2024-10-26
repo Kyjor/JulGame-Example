@@ -6,4 +6,4 @@ WindowName=Default Game
 PixelsPerUnit=16
 AutoScaleZoom=1
 IsResizable=0
-Fullscreen=0
+Fullscreen=1

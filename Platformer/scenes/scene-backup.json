@@ -80,7 +80,13 @@
                     },
                     "type": "Collider",
                     "isPlatformerCollider": false,
-                    "isTrigger": false
+                    "isTrigger": true
+                },
+                {
+                    "drag": 0.1,
+                    "mass": 1,
+                    "useGravity": false,
+                    "type": "Rigidbody"
                 },
                 {
                     "rotation": 0,
@@ -139,16 +145,17 @@
                     "name": "PlayerMovement",
                     "fields": {
                         "isFacingRight": true,
-                        "jumpSound": null,
-                        "xDir": 0,
-                        "isJump": false,
+                        "bulletTime": 0,
                         "gun": false,
-                        "yDir": 0,
-                        "animator": null,
-                        "bullet": null,
                         "canMove": false,
+                        "jumpSound": null,
+                        "isJump": false,
+                        "yDir": 0,
                         "input": {
-                        }
+                        },
+                        "bullet": null,
+                        "xDir": 0,
+                        "animator": null
                     }
                 }
             ],
@@ -176,7 +183,7 @@
                             ]
                         },
                         {
-                            "animatedFPS": 3,
+                            "animatedFPS": 2,
                             "frames": [
                                 {
                                     "x": 0,
@@ -189,9 +196,20 @@
                                     "y": 68,
                                     "z": 17,
                                     "t": 17
-                                },
+                                }
+                            ]
+                        },
+                        {
+                            "animatedFPS": 4,
+                            "frames": [
                                 {
                                     "x": 34,
+                                    "y": 68,
+                                    "z": 17,
+                                    "t": 17
+                                },
+                                {
+                                    "x": 0,
                                     "y": 68,
                                     "z": 17,
                                     "t": 17
@@ -221,6 +239,15 @@
                     "mass": 1,
                     "useGravity": true,
                     "type": "Rigidbody"
+                },
+                {
+                    "channel": -1,
+                    "volume": 50,
+                    "sound": {
+                    },
+                    "isMusic": false,
+                    "type": "SoundSource",
+                    "path": "Jump.wav"
                 },
                 {
                     "rotation": 0,
@@ -2697,7 +2724,7 @@
         },
         {
             "isActive": true,
-            "name": "tile2",
+            "name": "blue bug",
             "scripts": [
             ],
             "id": "7a4140e2-6a76-4a90-8f38-f48f5209935a",
@@ -2705,14 +2732,29 @@
             },
             "components": [
                 {
-                    "rotation": 0,
-                    "crop": {
-                        "t": 0,
+                    "tag": "Enemy",
+                    "offset": {
                         "x": 0,
-                        "z": 0,
                         "y": 0
                     },
-                    "isFlipped": false,
+                    "enabled": true,
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 17,
+                        "x": 51,
+                        "z": 17,
+                        "y": 85
+                    },
+                    "isFlipped": true,
                     "layer": 0,
                     "isWorldEntity": true,
                     "position": {
@@ -2729,10 +2771,10 @@
                         "y": 0.5
                     },
                     "size": {
-                        "x": 16,
-                        "y": 16
+                        "x": 169,
+                        "y": 101
                     },
-                    "imagePath": "tile_0025.png",
+                    "imagePath": "tilemap.png",
                     "color": {
                         "x": 255,
                         "z": 255,
@@ -2742,8 +2784,8 @@
                 },
                 {
                     "position": {
-                        "x": 3,
-                        "y": 8
+                        "x": 30,
+                        "y": 5
                     },
                     "type": "Transform",
                     "scale": {
@@ -3782,7 +3824,7 @@
                     "type": "Animator"
                 },
                 {
-                    "tag": "Test",
+                    "tag": "Enemy",
                     "offset": {
                         "x": 0,
                         "y": 0
@@ -4607,8 +4649,8 @@
                 },
                 {
                     "position": {
-                        "x": 31,
-                        "y": 6
+                        "x": 39,
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -5098,6 +5140,880 @@
                     }
                 }
             ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": "0af39a5c-52cc-4c97-8646-e0931dc43f49",
+            "parent": {
+            },
+            "components": [
+                {
+                    "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "enabled": true,
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "size": {
+                        "x": 16,
+                        "y": 16
+                    },
+                    "imagePath": "tile_0006.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 37,
+                        "y": 7
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": "d3f2a154-bb45-41c7-9e06-110d084fdd86",
+            "parent": {
+            },
+            "components": [
+                {
+                    "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "enabled": true,
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "size": {
+                        "x": 16,
+                        "y": 16
+                    },
+                    "imagePath": "tile_0007.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 38,
+                        "y": 7
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": "885fc729-4b0b-4dbb-a71f-426ee0fbf4b5",
+            "parent": {
+            },
+            "components": [
+                {
+                    "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "enabled": true,
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 16,
+                        "x": 68,
+                        "z": 16,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "size": {
+                        "x": 169,
+                        "y": 101
+                    },
+                    "imagePath": "tilemap.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 31,
+                        "y": 6
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": "b4b09b75-5002-4fdb-beec-7ba86e6af573",
+            "parent": {
+            },
+            "components": [
+                {
+                    "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "enabled": true,
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 16,
+                        "x": 68,
+                        "z": 16,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "size": {
+                        "x": 169,
+                        "y": 101
+                    },
+                    "imagePath": "tilemap.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 40,
+                        "y": 7
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": "329f03fb-d509-46da-bb2d-933f803af13a",
+            "parent": {
+            },
+            "components": [
+                {
+                    "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "enabled": true,
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "size": {
+                        "x": 16,
+                        "y": 16
+                    },
+                    "imagePath": "tile_0008.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 41,
+                        "y": 7
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": "bea86405-8b6f-4247-ad1d-1f1280870c18",
+            "parent": {
+            },
+            "components": [
+                {
+                    "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "enabled": true,
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "size": {
+                        "x": 16,
+                        "y": 16
+                    },
+                    "imagePath": "tile_0013.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 37,
+                        "y": 8
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": "d6020cf5-3415-4f08-acab-f3ae7e86c916",
+            "parent": {
+            },
+            "components": [
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "size": {
+                        "x": 16,
+                        "y": 16
+                    },
+                    "imagePath": "tile_0016.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 37,
+                        "y": 9
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": "bb60cb18-4369-443b-8326-4748301da2e5",
+            "parent": {
+            },
+            "components": [
+                {
+                    "tag": "Test",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "enabled": true,
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "size": {
+                        "x": 16,
+                        "y": 16
+                    },
+                    "imagePath": "tile_0015.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 41,
+                        "y": 8
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": "7466856d-d51e-40c7-883e-9641403af90f",
+            "parent": {
+            },
+            "components": [
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "size": {
+                        "x": 16,
+                        "y": 16
+                    },
+                    "imagePath": "tile_0018.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 41,
+                        "y": 9
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": "4cd5ecf7-0bb2-40b0-aa95-405aafee04f7",
+            "parent": {
+            },
+            "components": [
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "size": {
+                        "x": 16,
+                        "y": 16
+                    },
+                    "imagePath": "tile_0058.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 41,
+                        "y": 6
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": "291a8cba-d98e-4259-88e7-25aac6c27ede",
+            "parent": {
+            },
+            "components": [
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "size": {
+                        "x": 16,
+                        "y": 16
+                    },
+                    "imagePath": "tile_0049.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 41,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "tile2",
+            "scripts": [
+            ],
+            "id": "36622138-ceeb-4b9d-86a0-86115e8d699c",
+            "parent": {
+            },
+            "components": [
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "size": {
+                        "x": 16,
+                        "y": 16
+                    },
+                    "imagePath": "tile_0038.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 41,
+                        "y": 4
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "red bug",
+            "scripts": [
+            ],
+            "id": "313e0371-d512-4e9b-9a3d-3f8c25582758",
+            "parent": {
+            },
+            "components": [
+                {
+                    "tag": "Enemy",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "enabled": true,
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "rotation": 0,
+                    "crop": {
+                        "t": 17,
+                        "x": 85,
+                        "z": 17,
+                        "y": 85
+                    },
+                    "isFlipped": true,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "size": {
+                        "x": 169,
+                        "y": 101
+                    },
+                    "imagePath": "tilemap.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
+                    "position": {
+                        "x": 39,
+                        "y": 6
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
         }
     ],
     "Camera": {
@@ -5106,12 +6022,12 @@
             "y": 0
         },
         "position": {
-            "x": 1.687828749999995,
-            "y": 1.5910745288829933
+            "x": 2.0220968749999875,
+            "y": 1.5884979861963755
         },
         "size": {
-            "x": 500,
-            "y": 500
+            "x": 800,
+            "y": 600
         },
         "startingCoordinates": {
             "x": 0,
