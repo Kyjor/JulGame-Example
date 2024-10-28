@@ -1,9 +1,9 @@
-Width=800
+Width=1280
 Zoom=1.0
-Height=600
+Height=720
 FrameRate=120
 WindowName=Default Game
 PixelsPerUnit=16
 AutoScaleZoom=1
 IsResizable=0
-Fullscreen=1
+Fullscreen=0

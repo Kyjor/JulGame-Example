@@ -145,16 +145,18 @@
                     "name": "PlayerMovement",
                     "fields": {
                         "isFacingRight": true,
+                        "scoreText": null,
                         "bulletTime": 0,
                         "gun": false,
                         "canMove": false,
-                        "jumpSound": null,
                         "isJump": false,
                         "yDir": 0,
+                        "deathSound": null,
                         "input": {
                         },
                         "bullet": null,
                         "xDir": 0,
+                        "shootSound": null,
                         "animator": null
                     }
                 }
@@ -242,6 +244,7 @@
                 },
                 {
                     "channel": -1,
+                    "playOnStart": false,
                     "volume": 50,
                     "sound": {
                     },
@@ -2407,64 +2410,6 @@
             "name": "tile2",
             "scripts": [
             ],
-            "id": "3eefaaf2-f430-40dc-a3ff-a1104547125e",
-            "parent": {
-            },
-            "components": [
-                {
-                    "rotation": 0,
-                    "crop": {
-                        "t": 0,
-                        "x": 0,
-                        "z": 0,
-                        "y": 0
-                    },
-                    "isFlipped": false,
-                    "layer": 0,
-                    "isWorldEntity": true,
-                    "position": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "pixelsPerUnit": -1,
-                    "offset": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "center": {
-                        "x": 0.5,
-                        "y": 0.5
-                    },
-                    "size": {
-                        "x": 16,
-                        "y": 16
-                    },
-                    "imagePath": "tile_0024.png",
-                    "color": {
-                        "x": 255,
-                        "z": 255,
-                        "y": 255
-                    },
-                    "type": "Sprite"
-                },
-                {
-                    "position": {
-                        "x": 5,
-                        "y": 7
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "tile2",
-            "scripts": [
-            ],
             "id": "761ae324-a80e-4ff5-a85d-998affcb7d22",
             "parent": {
             },
@@ -2731,6 +2676,28 @@
             "parent": {
             },
             "components": [
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 2,
+                            "frames": [
+                                {
+                                    "x": 51,
+                                    "y": 86,
+                                    "z": 17,
+                                    "t": 15
+                                },
+                                {
+                                    "x": 68,
+                                    "y": 86,
+                                    "z": 17,
+                                    "t": 15
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                },
                 {
                     "tag": "Enemy",
                     "offset": {
@@ -3789,13 +3756,6 @@
             "isActive": true,
             "name": "Bee",
             "scripts": [
-                {
-                    "name": "Enemy",
-                    "fields": {
-                        "isFacingRight": null,
-                        "animator": null
-                    }
-                }
             ],
             "id": "3b2513c5-add2-4418-80f5-36d6ea2d4336",
             "parent": {
@@ -5952,6 +5912,28 @@
             },
             "components": [
                 {
+                    "animations": [
+                        {
+                            "animatedFPS": 2,
+                            "frames": [
+                                {
+                                    "x": 102,
+                                    "y": 85,
+                                    "z": 17,
+                                    "t": 16
+                                },
+                                {
+                                    "x": 85,
+                                    "y": 85,
+                                    "z": 17,
+                                    "t": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                },
+                {
                     "tag": "Enemy",
                     "offset": {
                         "x": 0,
@@ -6014,6 +5996,38 @@
                     }
                 }
             ]
+        },
+        {
+            "isActive": true,
+            "name": "music",
+            "scripts": [
+            ],
+            "id": "b5bb04dd-e95b-4eb1-bd1a-2f691c614234",
+            "parent": {
+            },
+            "components": [
+                {
+                    "channel": 1,
+                    "playOnStart": true,
+                    "volume": 50,
+                    "sound": {
+                    },
+                    "isMusic": true,
+                    "type": "SoundSource",
+                    "path": "Music.mp3"
+                },
+                {
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                }
+            ]
         }
     ],
     "Camera": {
@@ -6041,5 +6055,27 @@
         }
     },
     "UIElements": [
+        {
+            "fontSize": 40,
+            "isActive": true,
+            "name": "Score Text",
+            "id": 1,
+            "isWorldEntity": false,
+            "position": {
+                "x": 388,
+                "y": 0
+            },
+            "persistentBetweenScenes": false,
+            "isCenteredX": true,
+            "alpha": 255,
+            "size": {
+                "x": 24,
+                "y": 48
+            },
+            "isCenteredY": false,
+            "fontPath": "",
+            "text": "0",
+            "type": "TextBox"
+        }
     ]
 }

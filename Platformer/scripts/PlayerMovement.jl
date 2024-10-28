@@ -8,10 +8,12 @@ module PlayerMovementModule
         bullet
         bulletTime::Float64
         canMove::Bool
+        deathSound
         gun::Bool
         input
         isFacingRight::Bool
         isJump::Bool
+        scoreText
         shootSound
         parent
 
@@ -28,7 +30,9 @@ module PlayerMovementModule
             this.isJump = false
             this.parent = C_NULL
             this.bulletTime = 0.0
+            this.deathSound = nothing
             this.shootSound = nothing
+            this.scoreText = nothing
 
             this.xDir = 0
             this.yDir = 0
@@ -51,6 +55,8 @@ module PlayerMovementModule
         bulletCollisionEvent = JulGame.Macros.@argevent (col) handle_bullet_collisions(this, col)
         JulGame.Component.add_collision_event(this.bullet.collider, bulletCollisionEvent)
         this.shootSound = JulGame.SoundSourceModule.InternalSoundSource(this.parent, "LaserShoot.wav")
+        this.deathSound = JulGame.SoundSourceModule.InternalSoundSource(this.parent, "Death.wav")
+        this.scoreText = MAIN.scene.uiElements[1]
     end
 
     # This is called every frame
@@ -129,7 +135,7 @@ module PlayerMovementModule
         if this.bullet.isActive
             this.bulletTime += deltaTime
             bullet_update(this, deltaTime)
-            if this.bulletTime >= 3.0
+            if this.bulletTime >= 1.5
                 this.bulletTime = 0.0
                 this.bullet.isActive = false
             end
@@ -161,6 +167,10 @@ module PlayerMovementModule
 
         if col.tag == "Enemy"
             JulGame.destroy_entity(MAIN, col.parent) 
+            JulGame.Component.toggle_sound(this.deathSound)
+            score::Int = parse(Int, this.scoreText.text)
+            score += 1
+            this.scoreText.text = "$(score)"
         end
     end
 
