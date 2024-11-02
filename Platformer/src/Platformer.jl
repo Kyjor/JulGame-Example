@@ -1,10 +1,9 @@
 module Platformer 
-    using JulGame
-
+    using JulGame.SceneBuilderModule: Scene, load_and_prepare_scene
+    using JulGame: Main
     function run()
-        JulGame.MAIN = JulGame.Main(Float64(1.0))
-        scene = SceneBuilderModule.Scene("scene.json")
-        SceneBuilderModule.load_and_prepare_scene(;this=scene)
+        scene = Scene("scene.json")
+        load_and_prepare_scene(Main();this=scene)
     end
 
     julia_main() = run()

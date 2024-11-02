@@ -22,7 +22,6 @@ module PlayerMovementModule
 
         function PlayerMovement()
             this = new()
-
             this.canMove = false
             this.gun = false
             this.input = C_NULL
@@ -33,17 +32,12 @@ module PlayerMovementModule
             this.deathSound = nothing
             this.shootSound = nothing
             this.scoreText = nothing
-
             this.xDir = 0
             this.yDir = 0
-
             return this
         end
     end
 
-    # This is called when a scene is loaded, or when script is added to an entity
-    # This is where you should register collision events or other events
-    # Do not remove this function
     function JulGame.initialize(this::PlayerMovement)
         collisionEvent = JulGame.Macros.@argevent (col) handle_collisions(this, col)
         JulGame.Component.add_collision_event(this.parent.collider, collisionEvent)
@@ -59,97 +53,78 @@ module PlayerMovementModule
         this.scoreText = MAIN.scene.uiElements[1]
     end
 
-    # This is called every frame
-    # Do not remove this function
     function JulGame.update(this::PlayerMovement, deltaTime)
         this.canMove = true
-        x = 0
         speed = 5
         input = MAIN.input
         animIndex = this.gun ? 2 : 1
         moveAnims = this.animator.animations[animIndex]
-        # Inputs match SDL2 scancodes after "SDL_SCANCODE_"
-        # https://wiki.libsdl.org/SDL2/SDL_Scancode
-        # Spaces full scancode is "SDL_SCANCODE_SPACE" so we use "SPACE". Every other key is the same.
-        if ((JulGame.InputModule.get_button_pressed(MAIN.input,  "SPACE")  || input.button == 1)|| this.isJump) && this.parent.rigidbody.grounded && this.canMove 
+
+        if ((JulGame.InputModule.get_button_pressed(MAIN.input, "SPACE") || input.button == 1) || this.isJump) && this.parent.rigidbody.grounded && this.canMove
             this.animator.currentAnimation = moveAnims
             this.animator.currentAnimation.animatedFPS = 0
             AnimatorModule.force_frame_update(this.animator, 2)
             JulGame.Component.toggle_sound(this.parent.soundSource)
             RigidbodyModule.add_velocity(this.parent.rigidbody, Vector2f(0, -5))
         end
-        if (JulGame.InputModule.get_button_held_down(MAIN.input,  "A") || input.xDir == -1) && this.canMove
-            this.animator.currentAnimation = moveAnims
-            if JulGame.InputModule.get_button_pressed(MAIN.input,  "A")
-                AnimatorModule.force_frame_update(this.animator, 2)
-            end
-            x = -speed
-            if this.parent.rigidbody.grounded
-                this.animator.currentAnimation.animatedFPS = 5
-            end
-            if this.isFacingRight
-                this.isFacingRight = false
-                JulGame.Component.flip(this.parent.sprite)
-            end
-        elseif (JulGame.InputModule.get_button_held_down(MAIN.input,  "D")  || input.xDir == 1) && this.canMove
-            this.animator.currentAnimation = moveAnims
-            if JulGame.InputModule.get_button_pressed(MAIN.input,  "D")
-                AnimatorModule.force_frame_update(this.animator, 2)
-            end
-            if this.parent.rigidbody.grounded
-                this.animator.currentAnimation.animatedFPS = 5
-            end
-            x = speed
-            if !this.isFacingRight
-                this.isFacingRight = true
-                JulGame.Component.flip(this.parent.sprite)
-            end
-        elseif this.parent.rigidbody.grounded
-            this.animator.currentAnimation.animatedFPS = 0
-            AnimatorModule.force_frame_update(this.animator, 1)
-        end
+
+        x = handle_movement(this, input, speed, moveAnims)
 
         if this.gun && JulGame.InputModule.get_button_pressed(MAIN.input, "F") && !this.bullet.isActive
-            this.bulletTime = 0.0
-            offset = 1
-            if this.isFacingRight
-                this.bullet.sprite.isFlipped = false
-            else
-                offset = -1
-                this.bullet.sprite.isFlipped = true 
-            end
-
-            this.bullet.transform.position = Vector2f(this.parent.transform.position.x + offset, this.parent.transform.position.y)
-            this.animator.currentAnimation = this.animator.animations[3]
-            this.bullet.isActive = true  
-            JulGame.Component.toggle_sound(this.shootSound)
+            shoot_bullet(this)
         end
-        
+
         RigidbodyModule.set_velocity(this.parent.rigidbody, Vector2f(x, this.parent.rigidbody.velocity.y))
-        x = 0
-        this.isJump = false
-        if this.parent.transform.position.y > 8
-            this.parent.transform.position = Vector2f(1, 4)
-        end
-
+        
         if this.bullet.isActive
             this.bulletTime += deltaTime
             bullet_update(this, deltaTime)
             if this.bulletTime >= 1.5
-                this.bulletTime = 0.0
                 this.bullet.isActive = false
             end
         end
+
+        if this.parent.transform.position.y > 8
+            this.parent.transform.position = Vector2f(1, 4)
+        end
     end
 
-    # This is called when the script is removed from an entity (scene change, entity deletion)
-    # Do not remove this function
+    function handle_movement(this::PlayerMovement, input, speed, moveAnims)
+        x = 0
+        if ((JulGame.InputModule.get_button_held_down(MAIN.input, "A") || input.xDir == -1) || (JulGame.InputModule.get_button_held_down(MAIN.input, "D") || input.xDir == 1)) && this.canMove
+            this.animator.currentAnimation = moveAnims
+            AnimatorModule.force_frame_update(this.animator, 2)
+            x = (JulGame.InputModule.get_button_held_down(MAIN.input, "D") || input.xDir == 1) ? speed : -speed
+            this.animator.currentAnimation.animatedFPS = this.parent.rigidbody.grounded ? 5 : this.animator.currentAnimation.animatedFPS
+            
+            if (x > 0 && !this.isFacingRight) || (x < 0 && this.isFacingRight)
+                this.isFacingRight = !this.isFacingRight
+                JulGame.Component.flip(this.parent.sprite)
+            end
+        else
+            this.animator.currentAnimation.animatedFPS = this.parent.rigidbody.grounded ? 0 : this.animator.currentAnimation.animatedFPS
+            AnimatorModule.force_frame_update(this.animator, 1)
+        end
+        return x
+    end
+
+    function shoot_bullet(this::PlayerMovement)
+        this.bulletTime = 0.0
+        offset = this.isFacingRight ? 1 : -1
+        this.bullet.sprite.isFlipped = !this.isFacingRight
+
+        this.bullet.transform.position = Vector2f(this.parent.transform.position.x + offset, this.parent.transform.position.y)
+        this.animator.currentAnimation = this.animator.animations[3]
+        this.bullet.isActive = true  
+        JulGame.Component.toggle_sound(this.shootSound)
+    end
+
     function JulGame.on_shutdown(this::PlayerMovement)
     end 
 
     function handle_collisions(this::PlayerMovement, event)
         col = event.collider
-        if col.tag == "gun" && this.gun === false 
+        if col.tag == "gun" && !this.gun
             JulGame.destroy_entity(MAIN, col.parent)
             this.animator.currentAnimation = this.animator.animations[2]
             this.gun = true
@@ -158,9 +133,7 @@ module PlayerMovementModule
 
     function handle_bullet_collisions(this::PlayerMovement, event)
         col = event.collider
-        if col.tag == "Player"
-            println("Hit player")
-        else 
+        if col.tag != "Player"
             this.bullet.isActive = false
             this.bulletTime = 0.0
         end
@@ -168,8 +141,7 @@ module PlayerMovementModule
         if col.tag == "Enemy"
             JulGame.destroy_entity(MAIN, col.parent) 
             JulGame.Component.toggle_sound(this.deathSound)
-            score::Int = parse(Int, this.scoreText.text)
-            score += 1
+            score = parse(Int, this.scoreText.text) + 1
             this.scoreText.text = "$(score)"
         end
     end
