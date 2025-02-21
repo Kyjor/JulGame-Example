@@ -1,5 +1,6 @@
 module BobModule
-    using ..JulGame
+    using JulGame
+
     mutable struct Bob
         parent # do not remove this line, this is a reference to the entity that this script is attached to
         # This is where you define your script's fields
@@ -55,6 +56,10 @@ module BobModule
 
         # Update the item's Y-coordinate
         this.parent.sprite.offset = JulGame.Math.Vector2f(this.parent.sprite.offset.x, this.startingY + bobOffset)
+    end
+
+    function test()
+        println("test")
     end
 end
 

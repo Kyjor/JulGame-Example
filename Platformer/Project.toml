@@ -5,3 +5,6 @@ version = "0.0.1"
 
 [deps]
 JulGame = "4850f9bb-d191-4a1e-9f97-ee64062927c3"
+
+[compat]
+JulGame = "0.1.0"

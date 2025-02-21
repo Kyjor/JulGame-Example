@@ -4,6 +4,11 @@
             "isActive": true,
             "name": "tile2",
             "scripts": [
+                {
+                    "name": "Test",
+                    "fields": {
+                    }
+                }
             ],
             "id": "a13a3321-4858-4025-8b95-faa3d9319e07",
             "parent": {
@@ -39,6 +44,7 @@
                     },
                     "imagePath": "tile_0011.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -56,7 +62,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": false,
@@ -118,6 +125,7 @@
                     },
                     "imagePath": "tilemap.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -135,7 +143,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -144,20 +153,6 @@
                 {
                     "name": "PlayerMovement",
                     "fields": {
-                        "isFacingRight": true,
-                        "scoreText": null,
-                        "bulletTime": 0,
-                        "gun": false,
-                        "canMove": false,
-                        "isJump": false,
-                        "yDir": 0,
-                        "deathSound": null,
-                        "input": {
-                        },
-                        "bullet": null,
-                        "xDir": 0,
-                        "shootSound": null,
-                        "animator": null
                     }
                 }
             ],
@@ -282,6 +277,7 @@
                     },
                     "imagePath": "tilemap.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -299,7 +295,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -340,6 +337,7 @@
                     },
                     "imagePath": "tile_0001.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -357,7 +355,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -398,6 +397,7 @@
                     },
                     "imagePath": "tile_0002.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -415,7 +415,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -456,6 +457,7 @@
                     },
                     "imagePath": "tile_0012.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -473,7 +475,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -514,6 +517,7 @@
                     },
                     "imagePath": "tile_0001.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -531,7 +535,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -572,6 +577,7 @@
                     },
                     "imagePath": "tile_0002.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -589,7 +595,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -630,6 +637,7 @@
                     },
                     "imagePath": "tile_0011.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -647,7 +655,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -688,6 +697,7 @@
                     },
                     "imagePath": "tile_0038.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -705,7 +715,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -714,9 +725,6 @@
                 {
                     "name": "Bob",
                     "fields": {
-                        "isBobbing": true,
-                        "startingY": null,
-                        "elapsedTime": 0
                     }
                 }
             ],
@@ -769,6 +777,7 @@
                     },
                     "imagePath": "tile_0050.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -786,7 +795,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -827,6 +837,7 @@
                     },
                     "imagePath": "tile_0049.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -844,7 +855,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -900,6 +912,7 @@
                     },
                     "imagePath": "tile_0006.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -917,7 +930,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -973,6 +987,7 @@
                     },
                     "imagePath": "tile_0007.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -990,7 +1005,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -1046,6 +1062,7 @@
                     },
                     "imagePath": "tile_0008.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -1063,7 +1080,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -1104,6 +1122,7 @@
                     },
                     "imagePath": "tile_0034.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -1121,7 +1140,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -1162,6 +1182,7 @@
                     },
                     "imagePath": "tile_0035.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -1179,7 +1200,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -1220,6 +1242,7 @@
                     },
                     "imagePath": "tile_0032.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -1237,7 +1260,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -1278,6 +1302,7 @@
                     },
                     "imagePath": "tile_0058.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -1295,7 +1320,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -1336,6 +1362,7 @@
                     },
                     "imagePath": "tile_0031.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -1353,7 +1380,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -1394,6 +1422,7 @@
                     },
                     "imagePath": "tile_0023.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -1411,7 +1440,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -1467,6 +1497,7 @@
                     },
                     "imagePath": "tile_0015.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -1484,7 +1515,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -1540,6 +1572,7 @@
                     },
                     "imagePath": "tile_0021.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -1557,7 +1590,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -1613,6 +1647,7 @@
                     },
                     "imagePath": "tile_0004.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -1630,7 +1665,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -1686,6 +1722,7 @@
                     },
                     "imagePath": "tile_0021.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -1703,7 +1740,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -1759,6 +1797,7 @@
                     },
                     "imagePath": "tile_0020.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -1776,7 +1815,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -1832,6 +1872,7 @@
                     },
                     "imagePath": "tile_0007.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -1849,7 +1890,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -1905,6 +1947,7 @@
                     },
                     "imagePath": "tile_0021.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -1922,7 +1965,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -1978,6 +2022,7 @@
                     },
                     "imagePath": "tile_0022.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -1995,7 +2040,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -2051,6 +2097,7 @@
                     },
                     "imagePath": "tile_0008.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -2068,7 +2115,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -2124,6 +2172,7 @@
                     },
                     "imagePath": "tile_0019.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -2141,7 +2190,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -2197,6 +2247,7 @@
                     },
                     "imagePath": "tile_0013.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -2214,7 +2265,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -2270,6 +2322,7 @@
                     },
                     "imagePath": "tile_0015.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -2287,7 +2340,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -2328,6 +2382,7 @@
                     },
                     "imagePath": "tile_0024.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -2345,7 +2400,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -2386,6 +2442,7 @@
                     },
                     "imagePath": "tile_0025.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -2403,7 +2460,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -2459,6 +2517,7 @@
                     },
                     "imagePath": "tile_0015.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -2476,7 +2535,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -2517,6 +2577,7 @@
                     },
                     "imagePath": "tile_0016.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -2534,7 +2595,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -2575,6 +2637,7 @@
                     },
                     "imagePath": "tile_0018.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -2592,7 +2655,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -2648,6 +2712,7 @@
                     },
                     "imagePath": "tile_0029.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -2665,7 +2730,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -2743,6 +2809,7 @@
                     },
                     "imagePath": "tilemap.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -2760,7 +2827,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -2801,6 +2869,7 @@
                     },
                     "imagePath": "tile_0018.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -2818,7 +2887,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -2859,6 +2929,7 @@
                     },
                     "imagePath": "tile_0000.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -2876,7 +2947,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -2917,6 +2989,7 @@
                     },
                     "imagePath": "tile_0001.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -2934,7 +3007,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -2975,6 +3049,7 @@
                     },
                     "imagePath": "tile_0002.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -2992,7 +3067,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -3048,6 +3124,7 @@
                     },
                     "imagePath": "tile_0006.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -3065,7 +3142,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -3106,6 +3184,7 @@
                     },
                     "imagePath": "tile_0000.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -3123,7 +3202,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -3164,6 +3244,7 @@
                     },
                     "imagePath": "tile_0002.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -3181,7 +3262,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -3222,6 +3304,7 @@
                     },
                     "imagePath": "tile_0001.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -3239,7 +3322,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -3295,6 +3379,7 @@
                     },
                     "imagePath": "tile_0015.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -3312,7 +3397,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -3368,6 +3454,7 @@
                     },
                     "imagePath": "tile_0008.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -3385,7 +3472,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -3441,6 +3529,7 @@
                     },
                     "imagePath": "tile_0007.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -3458,7 +3547,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -3514,6 +3604,7 @@
                     },
                     "imagePath": "tile_0007.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -3531,7 +3622,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -3587,6 +3679,7 @@
                     },
                     "imagePath": "tile_0006.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -3604,7 +3697,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -3660,6 +3754,7 @@
                     },
                     "imagePath": "tile_0007.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -3677,7 +3772,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -3733,6 +3829,7 @@
                     },
                     "imagePath": "tile_0007.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -3750,7 +3847,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -3828,6 +3926,7 @@
                     },
                     "imagePath": "Bee.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -3845,7 +3944,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -3901,6 +4001,7 @@
                     },
                     "imagePath": "tile_0007.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -3918,7 +4019,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -3974,6 +4076,7 @@
                     },
                     "imagePath": "tile_0015.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -3991,7 +4094,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -4032,6 +4136,7 @@
                     },
                     "imagePath": "tile_0018.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -4049,7 +4154,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -4105,6 +4211,7 @@
                     },
                     "imagePath": "tile_0013.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -4122,7 +4229,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -4163,6 +4271,7 @@
                     },
                     "imagePath": "tile_0016.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -4180,7 +4289,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -4236,6 +4346,7 @@
                     },
                     "imagePath": "tile_0013.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -4253,7 +4364,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -4309,6 +4421,7 @@
                     },
                     "imagePath": "tile_0013.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -4326,7 +4439,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -4382,6 +4496,7 @@
                     },
                     "imagePath": "tile_0006.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -4399,7 +4514,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -4455,6 +4571,7 @@
                     },
                     "imagePath": "tile_0007.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -4472,7 +4589,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -4528,6 +4646,7 @@
                     },
                     "imagePath": "tilemap.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -4545,7 +4664,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -4601,6 +4721,7 @@
                     },
                     "imagePath": "tilemap.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -4618,7 +4739,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -4674,6 +4796,7 @@
                     },
                     "imagePath": "tilemap.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -4691,7 +4814,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -4732,6 +4856,7 @@
                     },
                     "imagePath": "tile_0016.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -4749,7 +4874,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -4805,6 +4931,7 @@
                     },
                     "imagePath": "tile_0013.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -4822,7 +4949,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -4878,6 +5006,7 @@
                     },
                     "imagePath": "tile_0015.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -4895,7 +5024,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -4936,6 +5066,7 @@
                     },
                     "imagePath": "tile_0018.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -4953,7 +5084,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -5009,6 +5141,7 @@
                     },
                     "imagePath": "tile_0015.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -5026,7 +5159,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -5082,6 +5216,7 @@
                     },
                     "imagePath": "tile_0008.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -5099,7 +5234,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -5155,6 +5291,7 @@
                     },
                     "imagePath": "tile_0006.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -5172,7 +5309,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -5228,6 +5366,7 @@
                     },
                     "imagePath": "tile_0007.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -5245,7 +5384,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -5301,6 +5441,7 @@
                     },
                     "imagePath": "tilemap.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -5318,7 +5459,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -5374,6 +5516,7 @@
                     },
                     "imagePath": "tilemap.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -5391,7 +5534,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -5447,6 +5591,7 @@
                     },
                     "imagePath": "tile_0008.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -5464,7 +5609,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -5520,6 +5666,7 @@
                     },
                     "imagePath": "tile_0013.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -5537,7 +5684,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -5578,6 +5726,7 @@
                     },
                     "imagePath": "tile_0016.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -5595,7 +5744,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -5651,6 +5801,7 @@
                     },
                     "imagePath": "tile_0015.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -5668,7 +5819,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -5709,6 +5861,7 @@
                     },
                     "imagePath": "tile_0018.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -5726,7 +5879,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -5767,6 +5921,7 @@
                     },
                     "imagePath": "tile_0058.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -5784,7 +5939,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -5825,6 +5981,7 @@
                     },
                     "imagePath": "tile_0049.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -5842,7 +5999,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -5883,6 +6041,7 @@
                     },
                     "imagePath": "tile_0038.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -5900,7 +6059,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -5978,6 +6138,7 @@
                     },
                     "imagePath": "tilemap.png",
                     "color": {
+                        "t": 255,
                         "x": 255,
                         "z": 255,
                         "y": 255
@@ -5995,7 +6156,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         },
         {
             "isActive": true,
@@ -6027,7 +6189,8 @@
                         "y": 1
                     }
                 }
-            ]
+            ],
+            "persistentBetweenScenes": false
         }
     ],
     "Camera": {
@@ -6062,7 +6225,7 @@
             "id": 1,
             "isWorldEntity": false,
             "position": {
-                "x": 388,
+                "x": 628,
                 "y": 0
             },
             "persistentBetweenScenes": false,

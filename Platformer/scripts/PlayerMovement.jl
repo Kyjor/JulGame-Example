@@ -1,9 +1,12 @@
 module PlayerMovementModule
-    using ..JulGame
-    using ..JulGame.AnimatorModule
-    using ..JulGame.Math
-
-    mutable struct PlayerMovement
+    using JulGame
+    using JulGame.AnimatorModule
+    using JulGame.Math
+    include("Bob.jl")
+    using .BobModule
+    using Dates
+    
+    mutable struct PlayerMovement <: Script
         animator
         bullet
         bulletTime::Float64
@@ -23,7 +26,7 @@ module PlayerMovementModule
         condition::Condition
 
         # Add a field to track the knockback coroutine
-        knockbackTask::Union{Task, Nothing}
+        knockbackTask#::Union{Task, Nothing}
 
         function PlayerMovement()
             this = new()
@@ -40,11 +43,15 @@ module PlayerMovementModule
             this.xDir = 0
             this.yDir = 0
             this.knockbackTask = nothing  # Initialize knockback task as nothing
+            test = Dates.format(Dates.now(), "yyyy-mm-ddTHH:MM:SS")
+            println("Current toto time: $test")
+
             return this
         end
     end
 
     function JulGame.initialize(this::PlayerMovement)
+        JulGame.Math.Vector2f(0, 0)
         collisionEvent = JulGame.Macros.@argevent (col) handle_collisions(this, col)
         JulGame.Component.add_collision_event(this.parent.collider, collisionEvent)
 
@@ -67,6 +74,7 @@ module PlayerMovementModule
         moveAnims = this.animator.animations[animIndex]
 
         if ((JulGame.InputModule.get_button_pressed(MAIN.input, "SPACE") || input.button == 1) || this.isJump) && this.parent.rigidbody.grounded && this.canMove
+            BobModule.test()
             this.animator.currentAnimation = moveAnims
             this.animator.currentAnimation.animatedFPS = 0
             AnimatorModule.force_frame_update(this.animator, 2)
@@ -82,16 +90,19 @@ module PlayerMovementModule
 
         if JulGame.InputModule.get_button_pressed(MAIN.input, "X") && this.knockbackTask === nothing
             println("Knockback triggered")
-            this.condition = Condition()
-            this.knockbackTask = @task knockback_coroutine(this)
-            schedule(this.knockbackTask)
-        elseif this.knockbackTask !== nothing && !istaskdone(this.knockbackTask)
-            println("Knockback coroutine is still running")
-            println("freed $(notify(this.condition)) waiting for $(this.condition)")
-            yield()
+            # this.condition = MAIN.coroutine_condition
+            # this.knockbackTask = @task knockback_coroutine(this)
+            # schedule(this.knockbackTask)
+            this.knockbackTask = "JulGame.CoroutineModule.Coroutine()"
+            JulGame.CoroutineModule.start_coroutine(knockback_coroutine, this)
+            JulGame.CoroutineModule.start_coroutine(knockback_coroutine, this)
+
+        #elseif this.knockbackTask !== nothing && !istaskdone(this.knockbackTask)
+            # println("Knockback coroutine is still running")
+            # println("freed $(notify(this.condition;all=true)) waiting for") #$(this.condition)")
+            # yield()
         end
         
-
         RigidbodyModule.set_velocity(this.parent.rigidbody, Vector2f(x, this.parent.rigidbody.velocity.y))
         
         if this.bullet.isActive
@@ -105,6 +116,9 @@ module PlayerMovementModule
         if this.parent.transform.position.y > 8
             this.parent.transform.position = Vector2f(1, 4)
         end
+        JulGame.ScriptModule.TestModule.test("tests")
+        #handle_movement(1)
+
     end
 
     function handle_movement(this::PlayerMovement, input, speed, moveAnims)
@@ -174,11 +188,12 @@ module PlayerMovementModule
         knockbackForce = this.isFacingRight ? -3 : 3  
         
         for i in 1:10
-            RigidbodyModule.add_velocity(this.parent.rigidbody, Vector2f(knockbackForce, -1))
+            RigidbodyModule.add_velocity(this.parent.rigidbody, Vector2f(knockbackForce, -0.5))
             #sleep(.1)  # Pause execution for 0.1 seconds
             #yield()  # Yield control back to the main loop
-            println("deltaTime: ", JulGame.DELTA_TIME)
-            wait(this.condition)
+            #println("deltaTime: ", JulGame.DELTA_TIME)
+            JulGame.CoroutineModule.wait_for_coroutine()
+            #wait(this.condition)
         end
     
         println("Knockback coroutine ended")
