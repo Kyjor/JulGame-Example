@@ -20,6 +20,11 @@ module PlayerMovementModule
         xDir::Int
         yDir::Int
 
+        condition::Condition
+
+        # Add a field to track the knockback coroutine
+        knockbackTask::Union{Task, Nothing}
+
         function PlayerMovement()
             this = new()
             this.canMove = false
@@ -34,6 +39,7 @@ module PlayerMovementModule
             this.scoreText = nothing
             this.xDir = 0
             this.yDir = 0
+            this.knockbackTask = nothing  # Initialize knockback task as nothing
             return this
         end
     end
@@ -73,6 +79,18 @@ module PlayerMovementModule
         if this.gun && JulGame.InputModule.get_button_pressed(MAIN.input, "F") && !this.bullet.isActive
             shoot_bullet(this)
         end
+
+        if JulGame.InputModule.get_button_pressed(MAIN.input, "X") && this.knockbackTask === nothing
+            println("Knockback triggered")
+            this.condition = Condition()
+            this.knockbackTask = @task knockback_coroutine(this)
+            schedule(this.knockbackTask)
+        elseif this.knockbackTask !== nothing && !istaskdone(this.knockbackTask)
+            println("Knockback coroutine is still running")
+            println("freed $(notify(this.condition)) waiting for $(this.condition)")
+            yield()
+        end
+        
 
         RigidbodyModule.set_velocity(this.parent.rigidbody, Vector2f(x, this.parent.rigidbody.velocity.y))
         
@@ -150,4 +168,21 @@ module PlayerMovementModule
        speed = this.bullet.sprite.isFlipped ? -5 : 5
        this.bullet.transform.position = Vector2f(this.bullet.transform.position.x + speed * deltaTime, this.bullet.transform.position.y) 
     end
+
+    function knockback_coroutine(this::PlayerMovement)
+        println("Knockback coroutine started")
+        knockbackForce = this.isFacingRight ? -3 : 3  
+        
+        for i in 1:10
+            RigidbodyModule.add_velocity(this.parent.rigidbody, Vector2f(knockbackForce, -1))
+            #sleep(.1)  # Pause execution for 0.1 seconds
+            #yield()  # Yield control back to the main loop
+            println("deltaTime: ", JulGame.DELTA_TIME)
+            wait(this.condition)
+        end
+    
+        println("Knockback coroutine ended")
+        this.knockbackTask = nothing  # Reset the task to nothing after completion
+    end
+    
 end # module
