@@ -5,5 +5,6 @@ FrameRate=120
 WindowName=Default Game
 PixelsPerUnit=16
 AutoScaleZoom=1
+Vsync=0
 IsResizable=0
 Fullscreen=0

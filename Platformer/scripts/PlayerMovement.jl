@@ -1,7 +1,8 @@
 module PlayerMovementModule
-    using ..JulGame
-    using ..JulGame.AnimatorModule
-    using ..JulGame.Math
+    using JulGame
+    using JulGame.AnimatorModule
+    using JulGame.RigidbodyModule
+    using JulGame.Math
 
     mutable struct PlayerMovement
         animator
@@ -74,6 +75,10 @@ module PlayerMovementModule
             RigidbodyModule.add_velocity(this.parent.rigidbody, Vector2f(0, -5))
         end
 
+        if JulGame.InputModule.get_button_pressed(MAIN.input, "p")
+            @debug "p triggered"
+        end
+
         x = handle_movement(this, input, speed, moveAnims)
 
         if this.gun && JulGame.InputModule.get_button_pressed(MAIN.input, "F") && !this.bullet.isActive
@@ -92,7 +97,7 @@ module PlayerMovementModule
         end
         
 
-        RigidbodyModule.set_velocity(this.parent.rigidbody, Vector2f(x, this.parent.rigidbody.velocity.y))
+        this.parent.rigidbody.velocity = Vector2f(x, this.parent.rigidbody.velocity.y)
         
         if this.bullet.isActive
             this.bulletTime += deltaTime
@@ -103,7 +108,8 @@ module PlayerMovementModule
         end
 
         if this.parent.transform.position.y > 8
-            this.parent.transform.position = Vector2f(1, 4)
+            pos = this.parent.transform.position
+            this.parent.transform.position = Vector3f(1, 4, pos.z)
         end
     end
 
@@ -131,7 +137,8 @@ module PlayerMovementModule
         offset = this.isFacingRight ? 1 : -1
         this.bullet.sprite.isFlipped = !this.isFacingRight
 
-        this.bullet.transform.position = Vector2f(this.parent.transform.position.x + offset, this.parent.transform.position.y)
+        pos = this.parent.transform.position
+        this.bullet.transform.position = Vector3f(pos.x + offset, pos.y, pos.z)
         this.animator.currentAnimation = this.animator.animations[3]
         this.bullet.isActive = true  
         JulGame.Component.toggle_sound(this.shootSound)
@@ -166,7 +173,8 @@ module PlayerMovementModule
 
     function bullet_update(this::PlayerMovement, deltaTime)
        speed = this.bullet.sprite.isFlipped ? -5 : 5
-       this.bullet.transform.position = Vector2f(this.bullet.transform.position.x + speed * deltaTime, this.bullet.transform.position.y) 
+       pos = this.bullet.transform.position
+       this.bullet.transform.position = Vector3f(pos.x + speed * deltaTime, pos.y, pos.z)
     end
 
     function knockback_coroutine(this::PlayerMovement)

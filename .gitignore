@@ -7,3 +7,5 @@ Build/
 .DS_Store
 
 *.swp
+
+Platformer/node_modules/

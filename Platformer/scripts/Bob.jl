@@ -1,5 +1,5 @@
 module BobModule
-    using ..JulGame
+    using JulGame
     mutable struct Bob
         parent # do not remove this line, this is a reference to the entity that this script is attached to
         # This is where you define your script's fields
