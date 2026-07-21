@@ -7,4 +7,7 @@ version = "0.0.1"
 JulGame = "4850f9bb-d191-4a1e-9f97-ee64062927c3"
 
 [sources]
-JulGame = {path = "../../JulGame.jl"}
+JulGame = { path = "../../JulGame.jl"}
+
+[compat]
+JulGame = "0.1.0"
