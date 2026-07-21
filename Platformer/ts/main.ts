@@ -2,8 +2,7 @@ import "julgame/src/engine/core/globalConstants";
 import { SDLPlatform, type ProjectConfig } from "julgame/src/platform/sdl-wasm";
 
 /** Side-effect imports register transpiled game scripts (`npm run transpile`). */
-import "./_generated/scripts/Bob";
-import "./_generated/scripts/PlayerMovement";
+import "./_generated/scripts/index";
 
 function getRequiredElement<T extends Element>(id: string, ctor: { new (): T }): T {
     const el = document.getElementById(id);
@@ -13,11 +12,12 @@ function getRequiredElement<T extends Element>(id: string, ctor: { new (): T }):
     return el;
 }
 
+/** Resolve from the served page (Platformer `index.html`), not the julgame engine package path. */
+const pageRoot = new URL("./", window.location.href);
 const project: ProjectConfig = {
-    sceneJsonUrl: new URL("../scenes/scene.json", import.meta.url).href,
-    memfsAssetBaseUrl: new URL("..", import.meta.url).href,
+    sceneJsonUrl: new URL("scenes/scene.json", pageRoot).href,
+    memfsAssetBaseUrl: pageRoot.href,
     basePath: "/game",
-    maxEntities: 256,
 };
 
 async function boot(): Promise<void> {

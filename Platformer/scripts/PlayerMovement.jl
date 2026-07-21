@@ -75,7 +75,7 @@ module PlayerMovementModule
             RigidbodyModule.add_velocity(this.parent.rigidbody, Vector2f(0, -5))
         end
 
-        if JulGame.InputModule.get_button_pressed(MAIN.input, "p")
+        if JulGame.InputModule.get_button_pressed(MAIN.input, "P")
             @debug "p triggered"
         end
 
@@ -115,19 +115,32 @@ module PlayerMovementModule
 
     function handle_movement(this::PlayerMovement, input, speed, moveAnims)
         x = 0
+        grounded = this.parent.rigidbody.grounded
         if ((JulGame.InputModule.get_button_held_down(MAIN.input, "A") || input.xDir == -1) || (JulGame.InputModule.get_button_held_down(MAIN.input, "D") || input.xDir == 1)) && this.canMove
             this.animator.currentAnimation = moveAnims
-            AnimatorModule.force_frame_update(this.animator, 2)
+            # Kick off walk only when leaving idle. Walk is 2 frames and wraps through 1 —
+            # forcing whenever lastFrame == 1 keeps you stuck on the legs-spread frame.
+            if grounded && this.animator.currentAnimation.animatedFPS == 0
+                AnimatorModule.force_frame_update(this.animator, 2)
+            end
             x = (JulGame.InputModule.get_button_held_down(MAIN.input, "D") || input.xDir == 1) ? speed : -speed
-            this.animator.currentAnimation.animatedFPS = this.parent.rigidbody.grounded ? 5 : this.animator.currentAnimation.animatedFPS
+            this.animator.currentAnimation.animatedFPS = grounded ? 5 : 0
             
             if (x > 0 && !this.isFacingRight) || (x < 0 && this.isFacingRight)
                 this.isFacingRight = !this.isFacingRight
                 JulGame.Component.flip(this.parent.sprite)
             end
         else
-            this.animator.currentAnimation.animatedFPS = this.parent.rigidbody.grounded ? 0 : this.animator.currentAnimation.animatedFPS
-            AnimatorModule.force_frame_update(this.animator, 1)
+            this.animator.currentAnimation.animatedFPS = 0
+            if grounded && this.animator.lastFrame != 1
+                AnimatorModule.force_frame_update(this.animator, 1)
+            end
+        end
+
+        if !grounded && this.animator.lastFrame != 2
+            this.animator.currentAnimation = moveAnims
+            this.animator.currentAnimation.animatedFPS = 0
+            AnimatorModule.force_frame_update(this.animator, 2)
         end
         return x
     end

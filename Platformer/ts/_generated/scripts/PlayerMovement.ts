@@ -69,7 +69,7 @@ import { isTaskDone, notifyCondition, scheduleTask, waitCondition, yieldTask } f
         let speed = 5
         let input = (globalThis as any).MAIN.input
         let animIndex = self.gun ? 2 : 1
-        let moveAnims = self.animator.animations[animIndex]
+        let moveAnims = self.animator.animations[animIndex - 1]
 
         if ((((globalThis as any).JulGame.InputModule.get_button_pressed((globalThis as any).MAIN.input, "SPACE") || input.button == 1) || self.isJump) && self.parent.rigidbody.grounded && self.canMove) {
             self.animator.currentAnimation = moveAnims
