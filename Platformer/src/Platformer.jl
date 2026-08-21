@@ -1,7 +1,12 @@
 module Platformer 
     using JulGame.SceneBuilderModule: Scene, load_and_prepare_scene
     using JulGame
+
+    include(joinpath(@__DIR__, "Scripts.jl"))
+    using .Scripts
+
     function run()
+        JulGame.ProjectModule = "Platformer"
         JulGame.MAIN = JulGame.MainLoop()
         scene = SceneBuilderModule.Scene(get(ENV, "SCENE", "scene.json"))
        
